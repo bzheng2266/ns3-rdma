@@ -1,0 +1,33 @@
+23 3 22
+0 21 22 
+0 1 40Gbps 0.004ms 0
+0 2 40Gbps 0.004ms 0
+0 3 40Gbps 0.004ms 0
+22 4 40Gbps 0.004ms 0
+22 5 40Gbps 0.004ms 0
+22 6 40Gbps 0.004ms 0
+22 7 40Gbps 0.004ms 0
+22 8 40Gbps 0.004ms 0
+22 9 40Gbps 0.004ms 0
+22 10 40Gbps 0.004ms 0
+22 11 40Gbps 0.004ms 0
+22 12 40Gbps 0.004ms 0
+22 13 40Gbps 0.004ms 0
+22 14 40Gbps 0.004ms 0
+22 15 40Gbps 0.004ms 0
+22 16 40Gbps 0.004ms 0
+22 17 40Gbps 0.004ms 0
+22 18 40Gbps 0.004ms 0
+22 19 40Gbps 0.004ms 0
+22 20 40Gbps 0.004ms 0
+0 21 40Gbps 0.004ms 0
+21 22 40Gbps 0.004ms 0
+
+First line: total node #, switch node #, link #
+Second line: switch node IDs...
+src0 dst0 rate delay error_rate ------> 1.1
+src1 dst1 rate delay error_rate ------> 1.2
+src2 dst2 rate delay error_rate ------> 1.3
+...
+
+
