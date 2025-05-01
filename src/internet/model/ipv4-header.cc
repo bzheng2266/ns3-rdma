@@ -168,9 +168,13 @@ Ipv4Header::EcnTypeToString (EcnType ecn) const
     {
       case NotECT:
         return "Not-ECT";
-      case ECT1:
+	  case TCT:
+		return "TCT";
+      // case ECT1:
         return "ECT (1)";
-      case ECT0:
+	  case UE:
+		return "UE";
+      // case ECT0:
         return "ECT (0)";
       case CE:
         return "CE";

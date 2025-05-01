@@ -1701,7 +1701,8 @@ TcpSocketBase::SendEmptyPacket (uint16_t flags)
   TcpHeader header;
   SequenceNumber32 s = m_nextTxSequence;
   /* Control packets shouldn't be ECT marked, unless we're using DCTCP */
-  uint8_t ECNbits = (m_DCTCP && (m_EcnState & ECN_CONN)) ? Ipv4Header::ECT1 : 0;
+  // uint8_t ECNbits = (m_DCTCP && (m_EcnState & ECN_CONN)) ? Ipv4Header::ECT1 : 0;
+  uint8_t ECNbits = (m_DCTCP && (m_EcnState & ECN_CONN)) ? Ipv4Header::TCT : 0;
   bool isAck = (flags == TcpHeader::ACK);
 
   // For D2TCP - Check if deadline have passed
@@ -2021,7 +2022,8 @@ TcpSocketBase::SendDataPacket (SequenceNumber32 seq, uint32_t maxSize, bool with
 {
   NS_LOG_FUNCTION (this << seq << maxSize << withAck);
 
-  uint8_t ECNbits = (m_EcnState & ECN_CONN) ? Ipv4Header::ECT1 : 0;
+  // uint8_t ECNbits = (m_EcnState & ECN_CONN) ? Ipv4Header::ECT1 : 0;
+  uint8_t ECNbits = (m_EcnState & ECN_CONN) ? Ipv4Header::TCT : 0;
 
   Ptr<Packet> p = m_txBuffer.CopyFromSequence (maxSize, seq);
   uint32_t sz = p->GetSize (); // Size of packet
@@ -2437,7 +2439,8 @@ void
 TcpSocketBase::PersistTimeout ()
 {
   NS_LOG_LOGIC ("PersistTimeout expired at " << Simulator::Now ().GetSeconds ());
-  uint8_t ECNbits = (m_EcnState & ECN_CONN) ? Ipv4Header::ECT1 : 0;
+  // uint8_t ECNbits = (m_EcnState & ECN_CONN) ? Ipv4Header::ECT1 : 0;
+  uint8_t ECNbits = (m_EcnState & ECN_CONN) ? Ipv4Header::TCT : 0;
   m_persistTimeout = std::min (Seconds (60), Time (2 * m_persistTimeout)); // max persist timeout = 60s
   Ptr<Packet> p = m_txBuffer.CopyFromSequence (1, m_nextTxSequence);
   TcpHeader tcpHeader;
