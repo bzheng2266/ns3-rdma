@@ -1,7 +1,7 @@
 23 3 22
 0 21 22 
-0 1 40Gbps 0.004ms 0
-0 2 40Gbps 0.004ms 0
+0 1 20Gbps 0.004ms 0
+0 2 20Gbps 0.004ms 0
 0 3 40Gbps 0.004ms 0
 22 4 40Gbps 0.004ms 0
 22 5 40Gbps 0.004ms 0
@@ -41,3 +41,4 @@ Switches
 Node0 : Leaf0
 Node21 : Spine
 Node22 : Leaf1
+
