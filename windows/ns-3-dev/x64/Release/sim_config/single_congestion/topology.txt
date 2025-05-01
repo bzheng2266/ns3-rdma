@@ -38,8 +38,8 @@ Node5 : R1(1.5)
 Node6-20: A0-A14(1.6-1.20)
 
 Switches
-Node0 : Leaf0
-Node21 : Spine
-Node22 : Leaf1
+Node0 : Leaf0(P0 & P1)
+Node21 : Spine(P2)
+Node22 : Leaf1(P3)
 
 
