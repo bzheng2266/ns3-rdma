@@ -44,18 +44,31 @@ Ipv6Header::Ipv6Header ()
 }
 
 void
-Ipv6Header::SetEcn (EcnType ecn)
+Ipv6Header::SetTcd(TcdType tcd)
 {
-  m_trafficClass &= 0xFC; // Clear out the ECN part, retain 6 bits of DSCP
-  m_trafficClass |= ecn;
+	m_trafficClass &= 0xFC; // Clear out the TCD part, retain 6 bits of DSCP
+	m_trafficClass |= tcd;
 }
 
-Ipv6Header::EcnType
-Ipv6Header::GetEcn (void) const
+Ipv6Header::TcdType
+Ipv6Header::GetTcd(void) const
 {
-  // Extract only last 2 bits of TC byte, i.e 0x3
-  return EcnType (m_trafficClass & 0x3);
+	return TcdType(m_trafficClass & 0x3);
 }
+
+// void
+// Ipv6Header::SetEcn (EcnType ecn)
+// {
+//   m_trafficClass &= 0xFC; // Clear out the ECN part, retain 6 bits of DSCP
+//   m_trafficClass |= ecn;
+// }
+
+// Ipv6Header::EcnType
+// Ipv6Header::GetEcn (void) const
+// {
+  // Extract only last 2 bits of TC byte, i.e 0x3
+//   return EcnType (m_trafficClass & 0x3);
+// }
 
 void Ipv6Header::SetTrafficClass (uint8_t traffic)
 {
@@ -197,16 +210,28 @@ uint32_t Ipv6Header::Deserialize (Buffer::Iterator start)
   return GetSerializedSize ();
 }
 
+// bool
+// Ipv6Header::IsCongestionAware(void) const
+// {
+//   return (GetEcn() != NotECT);
+// }
+
 bool
 Ipv6Header::IsCongestionAware(void) const
 {
-  return (GetEcn() != NotECT);
+	return (GetTcd() != NotTCD);
 }
 
+// void
+// Ipv6Header::SetCongested (void)
+// {
+//   SetEcn (CE);
+// }
+
 void
-Ipv6Header::SetCongested (void)
+Ipv6Header::SetCongested(void)
 {
-  SetEcn (CE);
+	SetTcd(CE);
 }
 
 } /* namespace ns3 */

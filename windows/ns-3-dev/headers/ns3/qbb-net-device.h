@@ -206,6 +206,9 @@ protected:
   bool m_EcnClampTgtRateAfterTimeInc;
   bool m_EcnClampTgtRate;
 
+  bool m_TcdClampTgtRateAfterTimeInc;
+  bool m_TcdClampTgtRate;
+
 
   /* RP parameters */
   //double   m_gd;		//< Control gain param for rate decrease
@@ -261,6 +264,16 @@ protected:
   double m_alpha_resume_interval;
   //uint32_t m_fastrecover_times;
 
+  struct TCDAccount {
+	  Ipv4Address source;
+	  uint32_t qIndex;
+	  uint32_t port;
+	  uint8_t tcdbits;
+	  uint16_t qfb;
+	  uint16_t total;
+  };
+  std::vector<TCDAccount> *m_tcd_source;
+
   //Time m_lastpause[qCnt]; //For adding back credits..
 
   uint32_t m_findex_udpport_map[fCnt];
@@ -281,6 +294,17 @@ protected:
   uint32_t m_ECNIngressCount[pCnt];
   uint32_t m_ECNEgressCount[pCnt];
 
+  void ResumeTCDState(uint32_t inDev);
+  void ResumeTCDIngressState(uint32_t inDev);
+  void ResumeTCDEgressState(uint32_t inDev);
+
+  EventId m_TCDStateEvent[pCnt];
+  EventId m_TCDIngressStateEvent[pCnt];
+  EventId m_TCDEgressStateEvent[pCnt];
+
+  uint32_t m_TCDState[pCnt];
+  uint32_t m_TCDIngressCount[pCnt];
+  uint32_t m_TCDEgressCount[pCnt];
 
   // Methods and members related to NACK functionality. 
 

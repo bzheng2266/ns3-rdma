@@ -31,10 +31,22 @@ namespace ns3 {
 
 NS_OBJECT_ENSURE_REGISTERED (CnHeader);
 
-CnHeader::CnHeader (const uint16_t fid, uint8_t qIndex, uint8_t ecnbits, uint16_t qfb, uint16_t total)
-  : m_fid(fid), m_qIndex(qIndex), m_qfb(qfb), m_ecnBits(ecnbits), m_total(total)
-{
+// CnHeader::CnHeader (const uint16_t fid, uint8_t qIndex, uint8_t ecnbits, uint16_t qfb, uint16_t total)
+//   : m_fid(fid), m_qIndex(qIndex), m_qfb(qfb), m_ecnBits(ecnbits), m_total(total)
+// {
   //NS_LOG_LOGIC("CN got the flow id " << std::hex << m_fid.hi << "+" << m_fid.lo << std::dec);
+// }
+
+// CnHeader::CnHeader(const uint16_t fid, uint8_t qIndex, uint8_t ecnbits, uint16_t qfb, uint16_t total)
+// 	: m_fid(fid), m_qIndex(qIndex), m_qfb(qfb), m_ecnBits(ecnbits), m_total(total)
+// {
+	//NS_LOG_LOGIC("CN got the flow id " << std::hex << m_fid.hi << "+" << m_fid.lo << std::dec);
+// }
+
+CnHeader::CnHeader(const uint16_t fid, uint8_t qIndex, uint8_t tcdbits, uint16_t qfb, uint16_t total)
+	: m_fid(fid), m_qIndex(qIndex), m_qfb(qfb), m_tcdBits(tcdbits), m_total(total)
+{
+	//NS_LOG_LOGIC("CN got the flow id " << std::hex << m_fid.hi << "+" << m_fid.lo << std::dec);
 }
 
 /*
@@ -46,7 +58,7 @@ CnHeader::CnHeader (const uint16_t fid, uint8_t qIndex, uint8_t qfb)
 */
 
 CnHeader::CnHeader ()
-  : m_fid(), m_qIndex(), m_qfb(0), m_ecnBits(0)
+  : m_fid(), m_qIndex(), m_qfb(0), m_tcdBits(0)
 {}
 
 CnHeader::~CnHeader ()
@@ -72,11 +84,15 @@ void CnHeader::SetTotal (uint16_t total)
 	m_total = total;
 }
 
-void CnHeader::SetECNBits (const uint8_t ecnbits)
-{
-	m_ecnBits = ecnbits;
-}
+// void CnHeader::SetECNBits (const uint8_t ecnbits)
+// {
+// 	m_ecnBits = ecnbits;
+// }
 
+void CnHeader::SetTCDBits(const uint8_t tcdbits)
+{
+	m_tcdBits = tcdbits;
+}
 
 uint16_t CnHeader::GetFlow () const
 {
@@ -98,9 +114,14 @@ uint16_t CnHeader::GetTotal() const
 	return m_total;
 }
 
-uint8_t CnHeader::GetECNBits() const
+// uint8_t CnHeader::GetECNBits() const
+// {
+// 	return m_ecnBits;
+// }
+
+uint8_t CnHeader::GetTCDBits() const
 {
-	return m_ecnBits;
+	return m_tcdBits;
 }
 
 TypeId 
@@ -136,7 +157,8 @@ void CnHeader::Serialize (Buffer::Iterator start)  const
   //start.WriteU64 (lobyte);
   start.WriteU8(m_qIndex);
   start.WriteU16(m_fid);
-  start.WriteU8(m_ecnBits);
+  // start.WriteU8(m_ecnBits);
+  start.WriteU8(m_tcdBits);
   start.WriteU16(m_qfb);
   start.WriteU16(m_total);
   //NS_LOG_LOGIC("CN Seriealized as " << std::hex << hibyte << "+" << lobyte << std::dec);
@@ -156,7 +178,8 @@ uint32_t CnHeader::Deserialize (Buffer::Iterator start)
 
   m_qIndex = start.ReadU8();
   m_fid = start.ReadU16();
-  m_ecnBits = start.ReadU8();
+  // m_ecnBits = start.ReadU8();
+  m_tcdBits = start.ReadU8();
   m_qfb = start.ReadU16();
   m_total = start.ReadU16();
 

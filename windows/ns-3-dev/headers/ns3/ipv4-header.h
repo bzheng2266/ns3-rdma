@@ -99,6 +99,24 @@ public:
   void SetDscp (DscpType dscp);
 
   /**
+  * \enum TcdType
+  * \brief TTCD Type defined in https://doi.org/10.1145/3452296.3472899
+  */
+  enum TcdType
+  {
+	  NotTCD = 0x00,	// TCD not supported
+	  TCD = 0x01,		// TCD supported
+	  UE = 0x02,		// Undetermined Encountered
+	  CE = 0x03			// Congestion Encountered
+  };
+
+  /**
+  * \brief Set TCD Field
+  * \param tcd TCD Type
+  */
+  void SetTcd(TcdType tcd);
+
+  /**
    * \enum EcnType
    * \brief ECN Type defined in RFC 3168
    */
@@ -178,6 +196,15 @@ public:
    */
   std::string DscpTypeToString (DscpType dscp) const;
   /**
+  * \returns the TCD field of this packet.
+  */
+  TcdType GetTcd(void) const;
+
+  /**
+  * \returns std::string of ECNType
+  */
+  std::string TcdTypeToString(TcdType tcd) const;
+  /**
    * \returns the ECN field of this packet.
    */
   EcnType GetEcn (void) const;
@@ -242,7 +269,7 @@ private:
 
   uint16_t m_payloadSize;
   uint16_t m_identification;
-  uint32_t m_tos : 8; //Also used as DSCP + ECN value
+  uint32_t m_tos : 8; //Also used as DSCP + ECN (Or TCD) value
   uint32_t m_ttl : 8;
   uint32_t m_protocol : 8;
   uint32_t m_flags : 3;

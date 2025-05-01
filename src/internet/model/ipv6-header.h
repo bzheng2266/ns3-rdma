@@ -74,27 +74,50 @@ public:
   Ipv6Header (void);
 
   /**
+   * \enum TcdType
+   * \brief TCD Type defined in https://doi.org/10.1145/3452296.3472899
+   */
+  enum TcdType
+  {
+	  NotTCD = 0x00,	// TCD not supported
+	  TCD = 0x01,		// TCD supported
+	  UE = 0x02,		// Undetermined Encountered
+	  CE = 0x03			// Congestion Encountered
+  };
+
+  /**
+   * \brief Set TCD Field
+   * \param tcd TCDType
+   */
+  void SetTcd(TcdType tcd);
+
+  /**
+   * \returns the TCD field of this packet.
+   */
+  TcdType GetTcd(void) const;
+
+  /**
    * \enum EcnType
    * \brief ECN Type defined in RFC 3168
    */
-  enum EcnType
-    {
-      NotECT = 0x00,
-      ECT1 = 0x01,
-      ECT0 = 0x02,
-      CE = 0x03
-    };
+//   enum EcnType
+//     {
+//       NotECT = 0x00,
+//       ECT1 = 0x01,
+//       ECT0 = 0x02,
+//       CE = 0x03
+//     };
 
   /**
    * \brief Set ECN Field
    * \param ecn ECN Type
    */
-  void SetEcn (EcnType ecn);
+//   void SetEcn (EcnType ecn);
 
   /**
    * \returns the ECN field of this packet.
    */
-  EcnType GetEcn (void) const;
+//   EcnType GetEcn (void) const;
 
   /**
    * \brief Set the "Traffic class" field.

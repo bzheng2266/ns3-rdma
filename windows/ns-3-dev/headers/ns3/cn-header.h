@@ -39,7 +39,8 @@ namespace ns3 {
 class CnHeader : public Header 
 {
 public:
-  CnHeader (const uint16_t fid, uint8_t qIndex, uint8_t ecnbits, uint16_t qfb, uint16_t total);
+  // CnHeader (const uint16_t fid, uint8_t qIndex, uint8_t ecnbits, uint16_t qfb, uint16_t total);
+	CnHeader(const uint16_t fid, uint8_t qIndex, uint8_t tcdbits, uint16_t qfb, uint16_t total);
   //CnHeader (const uint16_t fid, uint8_t qIndex, uint8_t qfb);
   CnHeader ();
   virtual ~CnHeader ();
@@ -70,8 +71,11 @@ public:
   void SetQindex (const uint8_t qIndex);
   uint8_t GetQindex () const;
 
-  void SetECNBits (const uint8_t ecnbits);
-  uint8_t GetECNBits () const;
+  // void SetECNBits (const uint8_t ecnbits);
+  // uint8_t GetECNBits () const;
+
+  void SetTCDBits(const uint8_t tcdbits);
+  uint8_t GetTCDBits() const;
 
 
   static TypeId GetTypeId (void);
@@ -85,7 +89,8 @@ private:
   uint16_t m_fid;
   uint8_t m_qIndex;
   uint16_t m_qfb;
-  uint8_t m_ecnBits;
+  // uint8_t m_ecnBits;
+  uint8_t m_tcdBits;
   uint16_t m_total;
 };
 

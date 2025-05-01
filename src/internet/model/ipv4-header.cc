@@ -87,11 +87,18 @@ Ipv4Header::SetDscp (DscpType dscp)
   m_tos |= dscp;
 }
 
+// void
+// Ipv4Header::SetEcn (EcnType ecn)
+// {
+//  m_tos &= 0xFC; // Clear out the ECN part, retain 6 bits of DSCP
+//  m_tos |= ecn;
+// }
+
 void
-Ipv4Header::SetEcn (EcnType ecn)
+Ipv4Header::SetTcd(TcdType tcd)
 {
-  m_tos &= 0xFC; // Clear out the ECN part, retain 6 bits of DSCP
-  m_tos |= ecn;
+	m_tos &= 0xFC; // Clear out the TCD part, retain 6 bits of DSCP
+	m_tos |= tcd;
 }
 
 Ipv4Header::DscpType
@@ -153,31 +160,54 @@ Ipv4Header::DscpTypeToString (DscpType dscp) const
     };
 }
 
-
-Ipv4Header::EcnType
-Ipv4Header::GetEcn (void) const
+Ipv4Header::TcdType
+Ipv4Header::GetTcd(void) const
 {
-  // Extract only last 2 bits of TOS byte, i.e 0x3
-  return EcnType (m_tos & 0x3);
+	return TcdType (m_tos & 0x3);
 }
 
 std::string
-Ipv4Header::EcnTypeToString (EcnType ecn) const
+Ipv4Header::TcdTypeToString(TcdType tcd) const
 {
-  switch (ecn)
-    {
-      case NotECT:
-        return "Not-ECT";
-      case ECT1:
-        return "ECT (1)";
-      case ECT0:
-        return "ECT (0)";
-      case CE:
-        return "CE";
-      default:
-        return "Unknown ECN";
-    };
+	switch (tcd) {
+		case NotTCD:
+			return "Not-TCD";
+		case TCD:
+			return "TCD";
+		case UE:
+			return "UE";
+		case CE:
+			return "CE";
+		default:
+			return "Unknown TCD";
+	};
 }
+
+
+// Ipv4Header::EcnType
+// Ipv4Header::GetEcn (void) const
+// {
+  // Extract only last 2 bits of TOS byte, i.e 0x3
+//   return EcnType (m_tos & 0x3);
+// }
+
+// std::string
+// Ipv4Header::EcnTypeToString (EcnType ecn) const
+// {
+//  switch (ecn)
+//     {
+//       case NotECT:
+//         return "Not-ECT";
+//       case ECT1:
+//         return "ECT (1)";
+//       case ECT0:
+//        return "ECT (0)";
+//       case CE:
+//         return "CE";
+//       default:
+//         return "Unknown ECN";
+//     };
+// }
 
 uint8_t
 Ipv4Header::GetTos (void) const
@@ -441,13 +471,14 @@ Ipv4Header::Deserialize (Buffer::Iterator start)
 bool
 Ipv4Header::IsCongestionAware(void) const
 {
-  return (GetEcn() != NotECT);
+  return (GetTcd() != NotTCD);
 }
 
 void
 Ipv4Header::SetCongested (void)
 {
-  SetEcn (CE);
+	SetTcd(CE);
+  // SetEcn (CE);
 }
 
 std::string

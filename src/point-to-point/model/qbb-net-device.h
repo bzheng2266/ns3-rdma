@@ -206,6 +206,8 @@ protected:
   bool m_EcnClampTgtRateAfterTimeInc;
   bool m_EcnClampTgtRate;
 
+  bool m_TcdClampTgtRateAfterTimeInc;
+  bool m_TcdClampTgtRate;
 
   /* RP parameters */
   //double   m_gd;		//< Control gain param for rate decrease
@@ -253,6 +255,17 @@ protected:
   };
 
   std::vector<ECNAccount> *m_ecn_source;
+
+  struct TCDAccount {
+	  Ipv4Address source;
+	  uint32_t qIndex;
+	  uint32_t port;
+	  uint8_t tcdbits;
+	  uint16_t qfb;
+	  uint16_t total;
+  };
+  std::vector<TCDAccount> *m_tcd_source;
+
   //uint32_t m_ecn_count;
   double m_qcn_interval;
   double m_alpha[fCnt][maxHop];
@@ -282,6 +295,18 @@ protected:
   uint32_t m_ECNEgressCount[pCnt];
 
 
+  // void ResumeTCDState(uint32_t inDev);
+  // void ResumeTCDIngressState(uint32_t inDev);
+  // void ResumeTCDEgressState(uint32_t inDev);
+
+  EventId m_TCDStateEvent[pCnt];
+  EventId m_TCDIngressStateEvent[pCnt];
+  EventId m_TCDEgressStateEvent[pCnt];
+
+  uint32_t m_TCDState[pCnt];
+  uint32_t m_TCDIngressCount[pCnt];
+  uint32_t m_TCDEgressCount[pCnt];
+
   // Methods and members related to NACK functionality. 
 
   //void CreateFiveTupleKey(Ptr<Packet> packet, char *fiveTuple);
@@ -308,7 +333,7 @@ protected:
 
   int ReceiverCheckSeq(uint32_t seq, uint32_t key);
   void Retransmit(uint32_t findex);
-  double m_nack_interval;
+  double m_nack_interval; // Time difference between NACKs. 
   double m_waitAckTimer;
   Ptr<DropTailQueue> m_sendingBuffer[fCnt];
   uint32_t m_chunk;

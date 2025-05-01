@@ -182,7 +182,8 @@ namespace ns3 {
 	QbbNetDevice::QbbNetDevice()
 	{
 		NS_LOG_FUNCTION(this);
-		m_ecn_source = new std::vector<ECNAccount>;
+		// m_ecn_source = new std::vector<ECNAccount>;
+		m_tcd_source = new std::vector<TCDAccount>;
 		for (uint32_t i = 0; i < qCnt; i++)
 		{
 			m_paused[i] = false;
@@ -207,9 +208,13 @@ namespace ns3 {
 		}
 		for (uint32_t i = 0; i < pCnt; i++)
 		{
-			m_ECNState[i] = 0;
-			m_ECNIngressCount[i] = 0;
-			m_ECNEgressCount[i] = 0;
+			// m_ECNState[i] = 0;
+			// m_ECNIngressCount[i] = 0;
+			// m_ECNEgressCount[i] = 0;
+
+			m_TCDState[i] = 0;
+			m_TCDIngressCount[i] = 0;
+			m_TCDEgressCount[i] = 0;
 		}
 	}
 
@@ -365,7 +370,8 @@ namespace ns3 {
 						bool egressCongested = ShouldSendCN(inDev, m_ifIndex, m_queue->GetLastQueue());
 						if (egressCongested)
 						{
-							h.SetEcn((Ipv4Header::EcnType)0x03);
+							h.SetTcd((Ipv4Header::TcdType)0x03);
+							// h.SetEcn((Ipv4Header::EcnType)0x03);
 						}
 						p->AddHeader(h);
 						p->AddHeader(ppp);
@@ -463,11 +469,12 @@ namespace ns3 {
 				{
 					if (ipv4h.GetProtocol() == 17)	//look at udp only
 					{
-						uint16_t ecnbits = ipv4h.GetEcn();
+						// uint16_t ecnbits = ipv4h.GetEcn();
+						uint16_t tcdbits = ipv4h.GetTcd();
 
 						UdpHeader udph;
 						p->RemoveHeader(udph);
-						SeqTsHeader sth;
+						SeqTsHeader sth; // NS-3's header that is used to tag packets with seq # and timestamp
 						p->PeekHeader(sth);
 
 						p->AddHeader(udph);
@@ -475,37 +482,49 @@ namespace ns3 {
 						bool found = false;
 						uint32_t i, key = 0;
 
-						for (i = 0; i < m_ecn_source->size(); ++i)
+						// for (i = 0; i < m_ecn_source->size(); ++i)
+						for (i = 0; i < m_tcd_source -> size(); ++i)
 						{
-							if ((*m_ecn_source)[i].source == ipv4h.GetSource() && (*m_ecn_source)[i].qIndex == GetPriority(p->Copy()) && (*m_ecn_source)[i].port == udph.GetSourcePort())
+							// if ((*m_ecn_source)[i].source == ipv4h.GetSource() && (*m_ecn_source)[i].qIndex == GetPriority(p->Copy()) && (*m_ecn_source)[i].port == udph.GetSourcePort())
+							if ((*m_tcd_source)[i].source == ipv4h.GetSource() && (*m_tcd_source)[i].qIndex == GetPriority(p->Copy()) && (*m_tcd_source)[i].port == udph.GetSourcePort()) 
 							{
 								found = true;
-								if (ecnbits != 0 && Simulator::Now().GetMicroSeconds() > m_qcn_np_sampling)
+								// if (ecnbits != 0 && Simulator::Now().GetMicroSeconds() > m_qcn_np_sampling)
+								if (tcdbits != 0 && Simulator::Now().GetMicroSeconds() > m_qcn_np_sampling)
 								{
-									(*m_ecn_source)[i].ecnbits |= ecnbits;
-									(*m_ecn_source)[i].qfb++;
+									// (*m_ecn_source)[i].ecnbits |= ecnbits;
+									// (*m_ecn_source)[i].qfb++;
+									(*m_tcd_source)[i].tcdbits |= tcdbits;
+									(*m_tcd_source)[i].qfb++;
 								}
-								(*m_ecn_source)[i].total++;
+								// (*m_ecn_source)[i].total++;
+								(*m_tcd_source)[i].total++;
 								key = i;
 							}
 						}
 						if (!found)
 						{
-							ECNAccount tmp;
+							// ECNAccount tmp;
+							TCDAccount tmp;
 							tmp.qIndex = GetPriority(p->Copy());
 							tmp.source = ipv4h.GetSource();
-							if (ecnbits != 0 && Simulator::Now().GetMicroSeconds() > m_qcn_np_sampling && tmp.qIndex != 1) //dctcp
+							// if (ecnbits != 0 && Simulator::Now().GetMicroSeconds() > m_qcn_np_sampling && tmp.qIndex != 1) //dctcp
+							if (tcdbits != 0 && Simulator::Now().GetMicroSeconds() > m_qcn_np_sampling && tmp.qIndex != 1)
 							{
-								tmp.ecnbits |= ecnbits;
+								// tmp.ecnbits |= ecnbits;
+								tmp.tcdbits |= tcdbits;
 								tmp.qfb = 1;
 							}
 							else
 							{
-								tmp.ecnbits = 0;
+								// tmp.ecnbits = 0;
+								tmp.tcdbits = 0;
 								tmp.qfb = 0;
 							}
 							tmp.total = 1;
 							tmp.port = udph.GetSourcePort();
+
+							/*
 							ReceiverNextExpectedSeq[m_ecn_source->size()] = 0;
 							m_nackTimer[m_ecn_source->size()] = Time(0);
 							m_milestone_rx[m_ecn_source->size()] = m_ack_interval;
@@ -513,6 +532,15 @@ namespace ns3 {
 							key = m_ecn_source->size();
 							m_ecn_source->push_back(tmp);
 							CheckandSendQCN(tmp.source, tmp.qIndex, tmp.port);
+							*/
+
+							ReceiverNextExpectedSeq[m_tcd_source->size()] = 0; // This is first time, so next expected seq is 0, which is checked after this.
+							m_nackTimer[m_tcd_source->size()] = Time(0);
+							m_milestone_rx[m_tcd_source->size()] = m_ack_interval;
+							m_lastNACK[m_tcd_source->size()] = -1;
+							key = m_tcd_source->size();
+							m_tcd_source->push_back(tmp);
+							CheckandSendQCN(tmp.source, tmp.qIndex, tmp.port); // Essentially starts the qcn check for this flow. Subsequent checks are scheduled by the function itself.
 						}
 
 						int x = ReceiverCheckSeq(sth.GetSeq(), key);
@@ -578,12 +606,14 @@ namespace ns3 {
 				unsigned qIndex = pauseh.GetQIndex();
 				m_paused[qIndex] = true;
 				if (pauseh.GetTime() > 0)
-				{
-					Simulator::Cancel(m_resumeEvt[qIndex]);
-					m_resumeEvt[qIndex] = Simulator::Schedule(MicroSeconds(pauseh.GetTime()), &QbbNetDevice::PauseFinish, this, qIndex);
+				{	
+					// If the time indicated in the pause packet is positive, wait that long before resuming.
+					Simulator::Cancel(m_resumeEvt[qIndex]);	// Cancel the resume event that was already scheduled.
+					m_resumeEvt[qIndex] = Simulator::Schedule(MicroSeconds(pauseh.GetTime()), &QbbNetDevice::PauseFinish, this, qIndex); // Schedule a new resume event after the time.
 				}
 				else
 				{
+					// If the time is 0 (indicating this is a resume packet) or negative for some reason, resume right away.
 					Simulator::Cancel(m_resumeEvt[qIndex]);
 					PauseFinish(qIndex);
 				}
@@ -604,7 +634,8 @@ namespace ns3 {
 				return;
 			}
 			uint32_t udpport = cnHead.GetFlow();
-			uint16_t ecnbits = cnHead.GetECNBits();
+			// uint16_t ecnbits = cnHead.GetECNBits();
+			uint16_t tcdbits = cnHead.GetTCDBits();
 			uint16_t qfb = cnHead.GetQfb();
 			uint16_t total = cnHead.GetTotal();
 
@@ -631,7 +662,8 @@ namespace ns3 {
 					m_targetRate[i][j] = m_bps;	//targetrate remembers the last rate
 				}
 			}
-			if (ecnbits == 0x03)
+			// if (ecnbits == 0x03)
+			if (tcdbits == 0x03)
 			{
 				rpr_cnm_received(i, 0, qfb*1.0 / (total + 1));
 			}
@@ -871,7 +903,7 @@ namespace ns3 {
 		Ptr<Packet> p = packet->Copy();
 		AddHeader(packet, protocolNumber);
 
-		if (m_node->GetNodeType() == 0)
+		if (m_node->GetNodeType() == 0) // NIC
 		{
 			if (m_qcnEnabled && qIndex == qCnt - 1)
 			{
@@ -1110,19 +1142,23 @@ namespace ns3 {
 	void
 		QbbNetDevice::CheckandSendQCN(Ipv4Address source, uint32_t qIndex, uint32_t port) //port is udp port
 	{
-		if (m_node->GetNodeType() > 0)
+		if (m_node->GetNodeType() > 0) // Not a NIC
 			return;
 		if (!m_qcnEnabled)
 			return;
-		for (uint32_t i = 0; i < m_ecn_source->size(); ++i)
+		// for (uint32_t i = 0; i < m_ecn_source->size(); ++i)
+		for (uint32_t i = 0; i < m_tcd_source->size(); ++i)
 		{
-			ECNAccount info = (*m_ecn_source)[i];
+			// ECNAccount info = (*m_ecn_source)[i];
+			TCDAccount info = (*m_tcd_source)[i];
 			if (info.source == source && info.qIndex == qIndex && info.port == port)
 			{
-				if (info.ecnbits == 0x03)
+				// if (info.ecnbits == 0x03)
+				if (info.tcdbits == 0x03)
 				{
 					Ptr<Packet> p = Create<Packet>(0);
-					CnHeader cn(port, qIndex, info.ecnbits, info.qfb, info.total);	// Prepare CN header
+					// CnHeader cn(port, qIndex, info.ecnbits, info.qfb, info.total);	// Prepare CN header
+					CnHeader cn(port, qIndex, info.tcdbits, info.qfb, info.total);
 					p->AddHeader(cn);
 					Ipv4Header head;	// Prepare IPv4 header
 					head.SetDestination(source);
@@ -1139,18 +1175,25 @@ namespace ns3 {
 						m_queue->Enqueue(p, 0);
 					else
 						m_queue->Enqueue(p, qCnt - 1);
-					((*m_ecn_source)[i]).ecnbits = 0;
-					((*m_ecn_source)[i]).qfb = 0;
-					((*m_ecn_source)[i]).total = 0;
+					// ((*m_ecn_source)[i]).ecnbits = 0;
+					// ((*m_ecn_source)[i]).qfb = 0;
+					// ((*m_ecn_source)[i]).total = 0;
+					((*m_tcd_source)[i]).tcdbits = 0;
+					((*m_tcd_source)[i]).qfb = 0;
+					((*m_tcd_source)[i]).total = 0;
 					DequeueAndTransmit();
 					Simulator::Schedule(MicroSeconds(m_qcn_interval), &QbbNetDevice::CheckandSendQCN, this, source, qIndex, port);
 
 				}
 				else
 				{
-					((*m_ecn_source)[i]).ecnbits = 0;
-					((*m_ecn_source)[i]).qfb = 0;
-					((*m_ecn_source)[i]).total = 0;
+					// ((*m_ecn_source)[i]).ecnbits = 0;
+					// ((*m_ecn_source)[i]).qfb = 0;
+					// ((*m_ecn_source)[i]).total = 0;
+					((*m_tcd_source)[i]).tcdbits = 0;
+					((*m_tcd_source)[i]).qfb = 0;
+					((*m_tcd_source)[i]).total = 0;
+
 					Simulator::Schedule(MicroSeconds(m_qcn_interval), &QbbNetDevice::CheckandSendQCN, this, source, qIndex, port);
 				}
 				break;
@@ -1376,6 +1419,7 @@ namespace ns3 {
 		return;
 	}
 
+	// React to Congest ECN marking
 	void
 		QbbNetDevice::rpr_cnm_received(uint32_t findex, uint32_t hop, double fraction)
 	{
@@ -1458,13 +1502,13 @@ namespace ns3 {
 			}
 			else
 			{
-				return 5;
+				return 5; // Only generate ACK every milestone it seems. 1 = generate ack.
 			}
 
 		}
-		else if (seq > expected)
+		else if (seq > expected) // Received a packet that is further than expected. Ie, expected 12, but received 15.
 		{
-			// Generate NACK
+			// Generate NACK only if a NACK hasn't been generated for a while.
 			if (Simulator::Now() > m_nackTimer[key] || m_lastNACK[key] != expected)
 			{
 				m_nackTimer[key] = Simulator::Now() + MicroSeconds(m_nack_interval);
@@ -1476,11 +1520,11 @@ namespace ns3 {
 				return 2;
 			}
 			else
-				return 4;
+				return 4; // NACK was recently generated, so skip generating NACK.
 		}
 		else
 		{
-			// Duplicate. 
+			// Duplicate. Already seen this seq number
 			return 3;
 		}
 	}
