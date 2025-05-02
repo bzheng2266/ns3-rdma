@@ -186,6 +186,7 @@ namespace ns3 {
 		for (uint32_t i = 0; i < qCnt; i++)
 		{
 			m_paused[i] = false;
+			m_onOff[i] = false;
 		}
 		m_qcn_np_sampling = 0;
 		for (uint32_t i = 0; i < fCnt; i++)
@@ -379,6 +380,7 @@ namespace ns3 {
 		else //No queue can deliver any packet
 		{
 			NS_LOG_INFO("PAUSE prohibits send at node " << m_node->GetId());
+			// std::clog << Simulator::Now().GetSeconds() << "\n";
 			if (m_node->GetNodeType() == 0 && m_qcnEnabled) //nothing to send, possibly due to qcn flow control, if so reschedule sending
 			{
 				Time t = Simulator::GetMaximumSimulationTime();
@@ -419,6 +421,8 @@ namespace ns3 {
 		NS_LOG_FUNCTION(this << qIndex);
 		NS_ASSERT_MSG(m_paused[qIndex], "Must be PAUSEd");
 		m_paused[qIndex] = false;
+		m_onOff[qIndex] = true;
+//		std::clog << m_maxOnOff << "\n";
 		NS_LOG_INFO("Node " << m_node->GetId() << " dev " << m_ifIndex << " queue " << qIndex <<
 			" resumed at " << Simulator::Now().GetSeconds());
 		DequeueAndTransmit();
@@ -506,13 +510,13 @@ namespace ns3 {
 							}
 							tmp.total = 1;
 							tmp.port = udph.GetSourcePort();
-							ReceiverNextExpectedSeq[m_ecn_source->size()] = 0;
+							ReceiverNextExpectedSeq[m_ecn_source->size()] = 0; // This is first time, so next expected seq is 0, which is checked after this.
 							m_nackTimer[m_ecn_source->size()] = Time(0);
 							m_milestone_rx[m_ecn_source->size()] = m_ack_interval;
 							m_lastNACK[m_ecn_source->size()] = -1;
 							key = m_ecn_source->size();
 							m_ecn_source->push_back(tmp);
-							CheckandSendQCN(tmp.source, tmp.qIndex, tmp.port);
+							CheckandSendQCN(tmp.source, tmp.qIndex, tmp.port); // Essentially starts the qcn check for this flow. Subsequent checks are scheduled by the function itself.
 						}
 
 						int x = ReceiverCheckSeq(sth.GetSeq(), key);
@@ -572,6 +576,7 @@ namespace ns3 {
 			}
 			else // If this is a Pause, stop the corresponding queue
 			{
+				std::clog << "hi" << std::endl;
 				if (!m_qbbEnabled) return;
 				PauseHeader pauseh;
 				p->RemoveHeader(pauseh);
@@ -579,11 +584,13 @@ namespace ns3 {
 				m_paused[qIndex] = true;
 				if (pauseh.GetTime() > 0)
 				{
-					Simulator::Cancel(m_resumeEvt[qIndex]);
-					m_resumeEvt[qIndex] = Simulator::Schedule(MicroSeconds(pauseh.GetTime()), &QbbNetDevice::PauseFinish, this, qIndex);
+					// If the time indicated in the pause packet is positive, wait that long before resuming.
+					Simulator::Cancel(m_resumeEvt[qIndex]); // Cancel the resume event that was already scheduled.
+					m_resumeEvt[qIndex] = Simulator::Schedule(MicroSeconds(pauseh.GetTime()), &QbbNetDevice::PauseFinish, this, qIndex); // Schedule a new resume event after the time
 				}
 				else
 				{
+					// If the time is 0 (indicating this is a resume packet) or negative (for some reason), resume right away.
 					Simulator::Cancel(m_resumeEvt[qIndex]);
 					PauseFinish(qIndex);
 				}
@@ -845,6 +852,7 @@ namespace ns3 {
 	{
 		NS_LOG_FUNCTION(this << packet << dest << protocolNumber);
 		NS_LOG_LOGIC("UID is " << packet->GetUid());
+
 		if (IsLinkUp() == false) {
 			m_macTxDropTrace(packet);
 			return false;
@@ -871,7 +879,7 @@ namespace ns3 {
 		Ptr<Packet> p = packet->Copy();
 		AddHeader(packet, protocolNumber);
 
-		if (m_node->GetNodeType() == 0)
+		if (m_node->GetNodeType() == 0) // NIC
 		{
 			if (m_qcnEnabled && qIndex == qCnt - 1)
 			{
@@ -1178,9 +1186,15 @@ namespace ns3 {
 		m_qcn_interval = qcn_interval;
 		m_rpgTimeReset = qcn_resume_interval;
 		m_g = g;
-		m_minRate = m_minRate;
+		m_minRate = minRate;
 		m_rai = rai;
 		m_rpgThreshold = fastrecover_times;
+		
+//		std::clog << this->m_bps.GetBitRate() << "bps" << std::endl;
+//		std::clog << this->GetMtu() << " bytes" << std::endl;
+//		TimeValue delay;
+//		this->m_channel->GetAttribute("Delay", delay);
+//		std::clog << delay.Get().GetSeconds() << " seconds" << std::endl;
 	}
 
 	Ptr<Channel>
