@@ -172,6 +172,7 @@ protected:
   EventId m_endOnOffEvt[qCnt];
   double m_maxOnOff;
 
+  void Placeholder(unsigned qIndex);
   //qcn
 
   //cp
