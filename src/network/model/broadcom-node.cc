@@ -79,13 +79,21 @@ namespace ns3 {
 		//m_buffer_cell_limit_sp_shared=4000*1030; //ingress sp buffer shared threshold, nonshare -> share
 		m_pg_min_cell = 1030; //ingress pg guarantee
 		m_port_min_cell = 1030; //ingress port guarantee
-		m_pg_shared_limit_cell = 20 * 1030; //max buffer for an ingress pg
+
+		//m_pg_shared_limit_cell = 20 * 1030; //max buffer for an ingress pg
+		m_pg_shared_limit_cell = 311 * 1030;
+
 		m_port_max_shared_cell = 311 * 1030; //max buffer for an ingress port (PFC XOFF 320KB)
+		//m_port_max_shared_cell = 4800 * 1030;
 		m_pg_hdrm_limit = 100 * 1030; //ingress pg headroom
 		m_port_max_pkt_size = 100 * 1030; //ingress global headroom
 		//still needs reset limits..
 		m_port_min_cell_off = 309 * 1030; //(PFC XON 318KB)
-		m_pg_shared_limit_cell_off = m_pg_shared_limit_cell - 2 * 1030;
+		//m_port_min_cell_off = 4700 * 1030;
+
+		//m_pg_shared_limit_cell_off = m_pg_shared_limit_cell - 2 * 1030;
+		m_pg_shared_limit_cell_off = 309 * 1030;
+
 		//egress params
 		m_op_buffer_shared_limit_cell = m_maxBufferBytes; //per egress sp limit
 		m_op_uc_port_config_cell = m_maxBufferBytes; //per egress port limit
