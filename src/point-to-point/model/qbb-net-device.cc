@@ -364,28 +364,28 @@ namespace ns3 {
 						PppHeader ppp;
 						p->RemoveHeader(ppp);
 						p->RemoveHeader(h);
-//						bool curr = false;
-//						if (h.GetEcn() == 0x03) {
+						bool curr = false;
+						if (h.GetEcn() == 0x03) {
 							
-//							std::clog << "Received congested" << std::endl;
-//							std::clog << h.GetEcn() << std::endl;
-//							curr = true;
+							std::clog << "Received congested" << std::endl;
+							std::clog << h.GetEcn() << std::endl;
+							curr = true;
 
-//						}
+						}
 						bool egressCongested = ShouldSendCN(inDev, m_ifIndex, m_queue->GetLastQueue());
 
-						if (h.GetEcn() != 0x03 && m_onOff[m_queue->GetLastQueue()]) 
-						{
-							h.SetEcn((Ipv4Header::EcnType)0x02);
+//						if (h.GetEcn() != 0x03 && m_onOff[m_queue->GetLastQueue()]) 
+//						{
+//							h.SetEcn((Ipv4Header::EcnType)0x02);
 //							std::clog << "Undetermined State!" << std::endl;
-						}
+//						}
 
-						else if (egressCongested)
+						if (egressCongested)
 						{
-//							std::clog << "I myself am congested." << std::endl;
-//							if (curr) {
-//								std::clog << "The received packet already indicates congestion." << std::endl;
-//							}
+							std::clog << "I myself am congested." << std::endl;
+							if (curr) {
+								std::clog << "The received packet already indicates congestion." << std::endl;
+							}
 
 							h.SetEcn((Ipv4Header::EcnType)0x03);
 						}
@@ -518,7 +518,7 @@ namespace ns3 {
 							if ((*m_ecn_source)[i].source == ipv4h.GetSource() && (*m_ecn_source)[i].qIndex == GetPriority(p->Copy()) && (*m_ecn_source)[i].port == udph.GetSourcePort())
 							{
 								found = true;
-								if (ecnbits != 0 && Simulator::Now().GetMicroSeconds() > m_qcn_np_sampling)
+								if (ecnbits != 0 && ecnbits != 2 && Simulator::Now().GetMicroSeconds() > m_qcn_np_sampling)
 								{
 									(*m_ecn_source)[i].ecnbits |= ecnbits;
 									(*m_ecn_source)[i].qfb++;
@@ -532,7 +532,7 @@ namespace ns3 {
 							ECNAccount tmp;
 							tmp.qIndex = GetPriority(p->Copy());
 							tmp.source = ipv4h.GetSource();
-							if (ecnbits != 0 && Simulator::Now().GetMicroSeconds() > m_qcn_np_sampling && tmp.qIndex != 1) //dctcp
+							if (ecnbits != 0 && ecnbits != 2 && Simulator::Now().GetMicroSeconds() > m_qcn_np_sampling && tmp.qIndex != 1) //dctcp
 							{
 								tmp.ecnbits |= ecnbits;
 								tmp.qfb = 1;
