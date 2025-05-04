@@ -10,7 +10,7 @@ TOPOLOGY_FILE sim_config/multi_congestion/topology.txt
 FLOW_FILE sim_config/multi_congestion/flow_multi_congestion.txt
 TCP_FLOW_FILE sim_config/multi_congestion/flow_tcp_0.txt
 TRACE_FILE sim_config/multi_congestion/trace.txt
-TRACE_OUTPUT_FILE sim_config/multi_congestion.tr
+TRACE_OUTPUT_FILE sim_config/multi_congestion20.tr
 
 SEND_IN_CHUNKS 0
 APP_START_TIME 0.0

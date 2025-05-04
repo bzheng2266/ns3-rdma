@@ -10,7 +10,7 @@ TOPOLOGY_FILE sim_config/victim_flows/topology.txt
 FLOW_FILE sim_config/victim_flows/flow_victim.txt
 TCP_FLOW_FILE sim_config/victim_flows/flow_tcp_0.txt
 TRACE_FILE sim_config/victim_flows/trace.txt
-TRACE_OUTPUT_FILE sim_config/victim.tr
+TRACE_OUTPUT_FILE sim_config/victim20.tr
 
 SEND_IN_CHUNKS 0
 APP_START_TIME 0.0
