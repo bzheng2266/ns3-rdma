@@ -1,7 +1,0 @@
-2
-21 22
-
-First line: tracing node #
-Node IDs...
-
-Tracing port 2 and 3
