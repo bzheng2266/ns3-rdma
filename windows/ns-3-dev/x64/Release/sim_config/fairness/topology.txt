@@ -1,8 +1,8 @@
 28 4 27
-0 21 22 23
+0 21 22 27
 0 1 40Gbps 0.004ms 0
 0 2 40Gbps 0.004ms 0
-23 3 40Gbps 0.004ms 0
+27 3 40Gbps 0.004ms 0
 22 4 40Gbps 0.004ms 0
 22 5 40Gbps 0.004ms 0
 22 6 40Gbps 0.004ms 0
@@ -25,7 +25,7 @@
 21 25 40Gbps 0.004ms 0
 21 26 40Gbps 0.004ms 0
 0 21 40Gbps 0.004ms 0
-23 21 40Gbps 0.004ms 0
+27 21 40Gbps 0.004ms 0
 21 22 40Gbps 0.004ms 0
 
 First line: total node #, switch node #, link #
