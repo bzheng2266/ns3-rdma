@@ -166,9 +166,13 @@ protected:
   //uint32_t m_buffersize;//< Total size of Tx buffer
   //uint32_t m_bufferUsage;	//< Occupancy at the buffer
   bool m_paused[qCnt];	//< Whether a queue paused
+  bool m_onOff[qCnt]; //< Whether a queue is in the on-off cycle
   EventId m_resumeEvt[qCnt];  //< Keeping the next resume event (PFC)
   EventId m_recheckEvt[pCnt][qCnt]; //< Keeping the next recheck queue full event (PFC)
+  EventId m_endOnOffEvt[qCnt];
+  double m_maxOnOff;
 
+  void Placeholder(unsigned qIndex);
   //qcn
 
   //cp

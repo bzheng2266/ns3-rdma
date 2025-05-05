@@ -186,6 +186,7 @@ namespace ns3 {
 		for (uint32_t i = 0; i < qCnt; i++)
 		{
 			m_paused[i] = false;
+			m_onOff[i] = false;
 		}
 		m_qcn_np_sampling = 0;
 		for (uint32_t i = 0; i < fCnt; i++)
@@ -226,6 +227,7 @@ namespace ns3 {
 		for (uint32_t i = 0; i < qCnt; i++)
 		{
 			Simulator::Cancel(m_resumeEvt[i]);
+			Simulator::Cancel(m_endOnOffEvt[i]);
 		}
 
 		for (uint32_t i = 0; i < fCnt; i++)
@@ -362,9 +364,29 @@ namespace ns3 {
 						PppHeader ppp;
 						p->RemoveHeader(ppp);
 						p->RemoveHeader(h);
+						bool curr = false;
+						if (h.GetEcn() == 0x03) {
+							
+							std::clog << "Received congested" << std::endl;
+							std::clog << h.GetEcn() << std::endl;
+							curr = true;
+
+						}
 						bool egressCongested = ShouldSendCN(inDev, m_ifIndex, m_queue->GetLastQueue());
+
+//						if (h.GetEcn() != 0x03 && m_onOff[m_queue->GetLastQueue()]) 
+//						{
+//							h.SetEcn((Ipv4Header::EcnType)0x02);
+//							std::clog << "Undetermined State!" << std::endl;
+//						}
+
 						if (egressCongested)
 						{
+							std::clog << "I myself am congested." << std::endl;
+							if (curr) {
+								std::clog << "The received packet already indicates congestion." << std::endl;
+							}
+
 							h.SetEcn((Ipv4Header::EcnType)0x03);
 						}
 						p->AddHeader(h);
@@ -419,6 +441,22 @@ namespace ns3 {
 		NS_LOG_FUNCTION(this << qIndex);
 		NS_ASSERT_MSG(m_paused[qIndex], "Must be PAUSEd");
 		m_paused[qIndex] = false;
+		m_onOff[qIndex] = true;
+		if (m_maxOnOff == 0) {
+			double epsilon = 0.05;
+			uint64_t sToUs = 1000000;
+			uint64_t C = this->m_bps.GetBitRate();
+			uint64_t Mtu = this->GetMtu() * 8;
+			TimeValue delay;
+			this->m_channel->GetAttribute("Delay", delay);
+			double prop_delay = delay.Get().GetSeconds();
+
+			// Time in microsecond for max(T_ON)
+			m_maxOnOff = (((3 * Mtu + (C * prop_delay)) / (epsilon * C)) + (2 * Mtu / C) + (2 * prop_delay)) * sToUs;
+		}
+
+		m_endOnOffEvt[qIndex] = Simulator::Schedule(MicroSeconds(m_maxOnOff), &QbbNetDevice::Placeholder, this, qIndex);
+
 		NS_LOG_INFO("Node " << m_node->GetId() << " dev " << m_ifIndex << " queue " << qIndex <<
 			" resumed at " << Simulator::Now().GetSeconds());
 		DequeueAndTransmit();
@@ -480,7 +518,7 @@ namespace ns3 {
 							if ((*m_ecn_source)[i].source == ipv4h.GetSource() && (*m_ecn_source)[i].qIndex == GetPriority(p->Copy()) && (*m_ecn_source)[i].port == udph.GetSourcePort())
 							{
 								found = true;
-								if (ecnbits != 0 && Simulator::Now().GetMicroSeconds() > m_qcn_np_sampling)
+								if (ecnbits != 0 && ecnbits != 2 && Simulator::Now().GetMicroSeconds() > m_qcn_np_sampling)
 								{
 									(*m_ecn_source)[i].ecnbits |= ecnbits;
 									(*m_ecn_source)[i].qfb++;
@@ -494,7 +532,7 @@ namespace ns3 {
 							ECNAccount tmp;
 							tmp.qIndex = GetPriority(p->Copy());
 							tmp.source = ipv4h.GetSource();
-							if (ecnbits != 0 && Simulator::Now().GetMicroSeconds() > m_qcn_np_sampling && tmp.qIndex != 1) //dctcp
+							if (ecnbits != 0 && ecnbits != 2 && Simulator::Now().GetMicroSeconds() > m_qcn_np_sampling && tmp.qIndex != 1) //dctcp
 							{
 								tmp.ecnbits |= ecnbits;
 								tmp.qfb = 1;
@@ -506,13 +544,13 @@ namespace ns3 {
 							}
 							tmp.total = 1;
 							tmp.port = udph.GetSourcePort();
-							ReceiverNextExpectedSeq[m_ecn_source->size()] = 0;
+							ReceiverNextExpectedSeq[m_ecn_source->size()] = 0; // This is first time, so next expected seq is 0, which is checked after this.
 							m_nackTimer[m_ecn_source->size()] = Time(0);
 							m_milestone_rx[m_ecn_source->size()] = m_ack_interval;
 							m_lastNACK[m_ecn_source->size()] = -1;
 							key = m_ecn_source->size();
 							m_ecn_source->push_back(tmp);
-							CheckandSendQCN(tmp.source, tmp.qIndex, tmp.port);
+							CheckandSendQCN(tmp.source, tmp.qIndex, tmp.port); // Essentially starts the qcn check for this flow. Subsequent checks are scheduled by the function itself.
 						}
 
 						int x = ReceiverCheckSeq(sth.GetSeq(), key);
@@ -579,12 +617,16 @@ namespace ns3 {
 				m_paused[qIndex] = true;
 				if (pauseh.GetTime() > 0)
 				{
-					Simulator::Cancel(m_resumeEvt[qIndex]);
-					m_resumeEvt[qIndex] = Simulator::Schedule(MicroSeconds(pauseh.GetTime()), &QbbNetDevice::PauseFinish, this, qIndex);
+					// If the time indicated in the pause packet is positive, wait that long before resuming.
+					Simulator::Cancel(m_resumeEvt[qIndex]); // Cancel the resume event that was already scheduled.
+					m_resumeEvt[qIndex] = Simulator::Schedule(MicroSeconds(pauseh.GetTime()), &QbbNetDevice::PauseFinish, this, qIndex); // Schedule a new resume event after the time
+					Simulator::Cancel(m_endOnOffEvt[qIndex]);
 				}
 				else
 				{
+					// If the time is 0 (indicating this is a resume packet) or negative (for some reason), resume right away.
 					Simulator::Cancel(m_resumeEvt[qIndex]);
+					Simulator::Cancel(m_endOnOffEvt[qIndex]);
 					PauseFinish(qIndex);
 				}
 			}
@@ -845,6 +887,7 @@ namespace ns3 {
 	{
 		NS_LOG_FUNCTION(this << packet << dest << protocolNumber);
 		NS_LOG_LOGIC("UID is " << packet->GetUid());
+
 		if (IsLinkUp() == false) {
 			m_macTxDropTrace(packet);
 			return false;
@@ -871,7 +914,7 @@ namespace ns3 {
 		Ptr<Packet> p = packet->Copy();
 		AddHeader(packet, protocolNumber);
 
-		if (m_node->GetNodeType() == 0)
+		if (m_node->GetNodeType() == 0) // NIC
 		{
 			if (m_qcnEnabled && qIndex == qCnt - 1)
 			{
@@ -1178,7 +1221,7 @@ namespace ns3 {
 		m_qcn_interval = qcn_interval;
 		m_rpgTimeReset = qcn_resume_interval;
 		m_g = g;
-		m_minRate = m_minRate;
+		m_minRate = minRate;
 		m_rai = rai;
 		m_rpgThreshold = fastrecover_times;
 	}
@@ -1483,6 +1526,12 @@ namespace ns3 {
 			// Duplicate. 
 			return 3;
 		}
+	}
+
+	void
+		QbbNetDevice::Placeholder(unsigned qIndex)
+	{
+		m_onOff[qIndex] = false;
 	}
 
 } // namespace ns3

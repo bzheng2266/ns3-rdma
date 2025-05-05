@@ -80,8 +80,10 @@ public:
   enum EcnType
     {
       NotECT = 0x00,
-      ECT1 = 0x01,
-      ECT0 = 0x02,
+      // ECT1 = 0x01,
+      // ECT0 = 0x02,
+	  TCT = 0x01,
+	  UE = 0x02,
       CE = 0x03
     };
 
