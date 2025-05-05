@@ -1,0 +1,1378 @@
++5428.0ns: I myself am congested.
++5632.0ns: I myself am congested.
++6856.0ns: I myself am congested.
++9508.0ns: I myself am congested.
++11548.0ns: I myself am congested.
++11956.0ns: I myself am congested.
++12364.0ns: I myself am congested.
++13384.0ns: I myself am congested.
++13792.0ns: I myself am congested.
++13996.0ns: I myself am congested.
++14200.0ns: I myself am congested.
++14404.0ns: I myself am congested.
++14812.0ns: I myself am congested.
++15016.0ns: I myself am congested.
++15424.0ns: I myself am congested.
++16036.0ns: I myself am congested.
++16240.0ns: I myself am congested.
++16444.0ns: I myself am congested.
++16648.0ns: I myself am congested.
++16852.0ns: I myself am congested.
++17056.0ns: I myself am congested.
++17260.0ns: I myself am congested.
++17464.0ns: I myself am congested.
++17668.0ns: I myself am congested.
++17872.0ns: I myself am congested.
++18076.0ns: I myself am congested.
++18280.0ns: I myself am congested.
++18484.0ns: I myself am congested.
++18688.0ns: I myself am congested.
++18892.0ns: I myself am congested.
++19096.0ns: I myself am congested.
++19504.0ns: I myself am congested.
++19708.0ns: I myself am congested.
++20116.0ns: I myself am congested.
++20320.0ns: I myself am congested.
++20524.0ns: I myself am congested.
++20932.0ns: I myself am congested.
++21136.0ns: I myself am congested.
++21544.0ns: I myself am congested.
++21748.0ns: I myself am congested.
++21952.0ns: I myself am congested.
++22156.0ns: I myself am congested.
++22360.0ns: I myself am congested.
++22564.0ns: I myself am congested.
++22768.0ns: I myself am congested.
++22972.0ns: I myself am congested.
++23176.0ns: I myself am congested.
++23380.0ns: I myself am congested.
++23788.0ns: I myself am congested.
++23992.0ns: I myself am congested.
++24196.0ns: I myself am congested.
++24400.0ns: I myself am congested.
++24604.0ns: I myself am congested.
++25012.0ns: I myself am congested.
++25420.0ns: I myself am congested.
++25624.0ns: I myself am congested.
++25828.0ns: I myself am congested.
++26032.0ns: I myself am congested.
++26236.0ns: I myself am congested.
++26440.0ns: I myself am congested.
++26644.0ns: I myself am congested.
++26848.0ns: I myself am congested.
++27256.0ns: I myself am congested.
++27460.0ns: I myself am congested.
++27664.0ns: I myself am congested.
++28072.0ns: I myself am congested.
++28276.0ns: I myself am congested.
++28480.0ns: I myself am congested.
++28684.0ns: I myself am congested.
++28888.0ns: I myself am congested.
++29092.0ns: I myself am congested.
++29500.0ns: I myself am congested.
++29704.0ns: I myself am congested.
++30112.0ns: I myself am congested.
++30316.0ns: I myself am congested.
++30520.0ns: I myself am congested.
++30724.0ns: I myself am congested.
++30928.0ns: I myself am congested.
++31132.0ns: I myself am congested.
++31336.0ns: I myself am congested.
++31540.0ns: I myself am congested.
++31744.0ns: I myself am congested.
++32356.0ns: I myself am congested.
++32560.0ns: I myself am congested.
++32764.0ns: I myself am congested.
++32968.0ns: I myself am congested.
++33172.0ns: I myself am congested.
++33580.0ns: I myself am congested.
++33784.0ns: I myself am congested.
++33988.0ns: I myself am congested.
++34192.0ns: I myself am congested.
++34396.0ns: I myself am congested.
++34600.0ns: I myself am congested.
++34804.0ns: I myself am congested.
++35008.0ns: I myself am congested.
++35212.0ns: I myself am congested.
++35416.0ns: I myself am congested.
++35620.0ns: I myself am congested.
++35824.0ns: I myself am congested.
++36028.0ns: I myself am congested.
++36232.0ns: I myself am congested.
++36436.0ns: I myself am congested.
++36640.0ns: I myself am congested.
++36844.0ns: I myself am congested.
++37048.0ns: I myself am congested.
++37252.0ns: I myself am congested.
++37456.0ns: I myself am congested.
++37660.0ns: I myself am congested.
++37864.0ns: I myself am congested.
++38068.0ns: I myself am congested.
++38272.0ns: I myself am congested.
++38476.0ns: I myself am congested.
++38680.0ns: I myself am congested.
++38884.0ns: I myself am congested.
++39088.0ns: I myself am congested.
++39292.0ns: I myself am congested.
++39700.0ns: I myself am congested.
++39904.0ns: I myself am congested.
++40516.0ns: I myself am congested.
++40720.0ns: I myself am congested.
++40924.0ns: I myself am congested.
++41332.0ns: I myself am congested.
++41536.0ns: I myself am congested.
++42148.0ns: I myself am congested.
++42352.0ns: I myself am congested.
++43168.0ns: I myself am congested.
++43372.0ns: I myself am congested.
++43576.0ns: I myself am congested.
++43780.0ns: I myself am congested.
++43984.0ns: I myself am congested.
++44188.0ns: I myself am congested.
++44392.0ns: I myself am congested.
++44596.0ns: I myself am congested.
++44800.0ns: I myself am congested.
++45412.0ns: I myself am congested.
++45616.0ns: I myself am congested.
++46024.0ns: I myself am congested.
++46228.0ns: I myself am congested.
++46432.0ns: I myself am congested.
++46636.0ns: I myself am congested.
++46840.0ns: I myself am congested.
++47248.0ns: I myself am congested.
++47452.0ns: I myself am congested.
++47656.0ns: I myself am congested.
++47860.0ns: I myself am congested.
++48268.0ns: I myself am congested.
++48472.0ns: I myself am congested.
++49084.0ns: I myself am congested.
++49696.0ns: I myself am congested.
++49900.0ns: I myself am congested.
++50104.0ns: I myself am congested.
++50512.0ns: I myself am congested.
++50716.0ns: I myself am congested.
++50920.0ns: I myself am congested.
++51124.0ns: I myself am congested.
++51328.0ns: I myself am congested.
++51532.0ns: I myself am congested.
++51736.0ns: I myself am congested.
++52144.0ns: I myself am congested.
++52348.0ns: I myself am congested.
++52552.0ns: I myself am congested.
++53164.0ns: I myself am congested.
++53572.0ns: I myself am congested.
++53776.0ns: I myself am congested.
++53980.0ns: I myself am congested.
++55000.0ns: I myself am congested.
++55204.0ns: I myself am congested.
++55408.0ns: I myself am congested.
++55612.0ns: I myself am congested.
++55816.0ns: I myself am congested.
++56020.0ns: I myself am congested.
++56224.0ns: I myself am congested.
++56428.0ns: I myself am congested.
++56632.0ns: I myself am congested.
++56836.0ns: I myself am congested.
++57244.0ns: I myself am congested.
++57448.0ns: I myself am congested.
++57856.0ns: I myself am congested.
++58060.0ns: I myself am congested.
++58264.0ns: I myself am congested.
++58672.0ns: I myself am congested.
++58876.0ns: I myself am congested.
++59080.0ns: I myself am congested.
++59284.0ns: I myself am congested.
++59692.0ns: I myself am congested.
++60304.0ns: I myself am congested.
++60508.0ns: I myself am congested.
++60712.0ns: I myself am congested.
++60916.0ns: I myself am congested.
++61324.0ns: I myself am congested.
++61936.0ns: I myself am congested.
++62140.0ns: I myself am congested.
++63160.0ns: I myself am congested.
++63364.0ns: I myself am congested.
++63772.0ns: I myself am congested.
++63976.0ns: I myself am congested.
++64180.0ns: I myself am congested.
++64384.0ns: I myself am congested.
++64588.0ns: I myself am congested.
++64792.0ns: I myself am congested.
++64996.0ns: I myself am congested.
++65200.0ns: I myself am congested.
++65404.0ns: I myself am congested.
++65608.0ns: I myself am congested.
++66016.0ns: I myself am congested.
++66424.0ns: I myself am congested.
++66628.0ns: I myself am congested.
++67036.0ns: I myself am congested.
++67240.0ns: I myself am congested.
++67648.0ns: I myself am congested.
++67852.0ns: I myself am congested.
++68056.0ns: I myself am congested.
++68464.0ns: I myself am congested.
++68668.0ns: I myself am congested.
++68872.0ns: I myself am congested.
++69076.0ns: I myself am congested.
++69280.0ns: I myself am congested.
++69484.0ns: I myself am congested.
++69892.0ns: I myself am congested.
++70096.0ns: I myself am congested.
++70300.0ns: I myself am congested.
++70504.0ns: I myself am congested.
++70912.0ns: I myself am congested.
++71116.0ns: I myself am congested.
++71320.0ns: I myself am congested.
++71524.0ns: I myself am congested.
++72544.0ns: I myself am congested.
++72952.0ns: I myself am congested.
++73360.0ns: I myself am congested.
++73972.0ns: I myself am congested.
++74992.0ns: I myself am congested.
++75196.0ns: I myself am congested.
++75400.0ns: I myself am congested.
++75604.0ns: I myself am congested.
++75808.0ns: I myself am congested.
++76012.0ns: I myself am congested.
++76624.0ns: I myself am congested.
++77848.0ns: I myself am congested.
++78052.0ns: I myself am congested.
++78256.0ns: I myself am congested.
++78460.0ns: I myself am congested.
++78664.0ns: I myself am congested.
++78868.0ns: I myself am congested.
++79276.0ns: I myself am congested.
++79480.0ns: I myself am congested.
++79684.0ns: I myself am congested.
++79888.0ns: I myself am congested.
++80092.0ns: I myself am congested.
++80500.0ns: I myself am congested.
++80908.0ns: I myself am congested.
++81316.0ns: I myself am congested.
++81724.0ns: I myself am congested.
++82336.0ns: I myself am congested.
++83152.0ns: I myself am congested.
++83356.0ns: I myself am congested.
++83560.0ns: I myself am congested.
++83968.0ns: I myself am congested.
++84172.0ns: I myself am congested.
++84376.0ns: I myself am congested.
++84988.0ns: I myself am congested.
++85192.0ns: I myself am congested.
++86212.0ns: I myself am congested.
++86416.0ns: I myself am congested.
++87028.0ns: I myself am congested.
++87436.0ns: I myself am congested.
++87640.0ns: I myself am congested.
++87844.0ns: I myself am congested.
++88048.0ns: I myself am congested.
++88456.0ns: I myself am congested.
++88660.0ns: I myself am congested.
++88864.0ns: I myself am congested.
++89272.0ns: I myself am congested.
++90292.0ns: I myself am congested.
++90496.0ns: I myself am congested.
++91312.0ns: I myself am congested.
++91516.0ns: I myself am congested.
++91720.0ns: I myself am congested.
++91924.0ns: I myself am congested.
++92536.0ns: I myself am congested.
++92740.0ns: I myself am congested.
++92944.0ns: I myself am congested.
++93148.0ns: I myself am congested.
++93352.0ns: I myself am congested.
++93964.0ns: I myself am congested.
++94168.0ns: I myself am congested.
++94576.0ns: I myself am congested.
++95188.0ns: I myself am congested.
++95800.0ns: I myself am congested.
++96208.0ns: I myself am congested.
++96412.0ns: I myself am congested.
++96820.0ns: I myself am congested.
++97024.0ns: I myself am congested.
++97228.0ns: I myself am congested.
++97432.0ns: I myself am congested.
++98452.0ns: I myself am congested.
++98656.0ns: I myself am congested.
++99676.0ns: I myself am congested.
++99880.0ns: I myself am congested.
++100696.0ns: I myself am congested.
++101308.0ns: I myself am congested.
++102532.0ns: I myself am congested.
++102940.0ns: I myself am congested.
++103348.0ns: I myself am congested.
++103552.0ns: I myself am congested.
++104980.0ns: I myself am congested.
++106000.0ns: I myself am congested.
++106408.0ns: I myself am congested.
++106612.0ns: I myself am congested.
++106816.0ns: I myself am congested.
++107224.0ns: I myself am congested.
++107428.0ns: I myself am congested.
++107632.0ns: I myself am congested.
++107836.0ns: I myself am congested.
++108040.0ns: I myself am congested.
++109468.0ns: I myself am congested.
++109876.0ns: I myself am congested.
++110488.0ns: I myself am congested.
++110896.0ns: I myself am congested.
++111100.0ns: I myself am congested.
++111508.0ns: I myself am congested.
++111712.0ns: I myself am congested.
++112324.0ns: I myself am congested.
++112732.0ns: I myself am congested.
++113140.0ns: I myself am congested.
++113344.0ns: I myself am congested.
++114568.0ns: I myself am congested.
++114976.0ns: I myself am congested.
++115792.0ns: I myself am congested.
++116404.0ns: I myself am congested.
++116608.0ns: I myself am congested.
++116812.0ns: I myself am congested.
++117424.0ns: I myself am congested.
++117832.0ns: I myself am congested.
++118036.0ns: I myself am congested.
++118444.0ns: I myself am congested.
++118648.0ns: I myself am congested.
++119668.0ns: I myself am congested.
++120484.0ns: I myself am congested.
++120688.0ns: I myself am congested.
++120892.0ns: I myself am congested.
++121504.0ns: I myself am congested.
++121912.0ns: I myself am congested.
++122728.0ns: I myself am congested.
++123136.0ns: I myself am congested.
++123340.0ns: I myself am congested.
++124360.0ns: I myself am congested.
++124564.0ns: I myself am congested.
++124768.0ns: I myself am congested.
++124972.0ns: I myself am congested.
++125176.0ns: I myself am congested.
++125584.0ns: I myself am congested.
++125992.0ns: I myself am congested.
++126808.0ns: I myself am congested.
++128440.0ns: I myself am congested.
++128848.0ns: I myself am congested.
++129052.0ns: I myself am congested.
++129256.0ns: I myself am congested.
++130888.0ns: I myself am congested.
++131296.0ns: I myself am congested.
++131704.0ns: I myself am congested.
++131908.0ns: I myself am congested.
++132520.0ns: I myself am congested.
++132724.0ns: I myself am congested.
++133540.0ns: I myself am congested.
++134560.0ns: I myself am congested.
++134764.0ns: I myself am congested.
++135376.0ns: I myself am congested.
++135988.0ns: I myself am congested.
++137824.0ns: I myself am congested.
++138028.0ns: I myself am congested.
++138232.0ns: I myself am congested.
++138640.0ns: I myself am congested.
++139252.0ns: I myself am congested.
++139456.0ns: I myself am congested.
++139660.0ns: I myself am congested.
++139864.0ns: I myself am congested.
++140884.0ns: I myself am congested.
++142312.0ns: I myself am congested.
++142720.0ns: I myself am congested.
++143128.0ns: I myself am congested.
++143944.0ns: I myself am congested.
++144352.0ns: I myself am congested.
++144760.0ns: I myself am congested.
++144964.0ns: I myself am congested.
++147004.0ns: I myself am congested.
++147616.0ns: I myself am congested.
++148228.0ns: I myself am congested.
++152104.0ns: I myself am congested.
++152308.0ns: I myself am congested.
++153532.0ns: I myself am congested.
++154960.0ns: I myself am congested.
++158836.0ns: I myself am congested.
++159244.0ns: I myself am congested.
++161488.0ns: I myself am congested.
++161896.0ns: I myself am congested.
++162100.0ns: I myself am congested.
++163732.0ns: I myself am congested.
++164344.0ns: I myself am congested.
++164956.0ns: I myself am congested.
++166384.0ns: I myself am congested.
++166792.0ns: I myself am congested.
++167404.0ns: I myself am congested.
++168016.0ns: I myself am congested.
++168628.0ns: I myself am congested.
++171688.0ns: I myself am congested.
++171892.0ns: I myself am congested.
++175972.0ns: I myself am congested.
++176992.0ns: I myself am congested.
++181684.0ns: I myself am congested.
++182908.0ns: I myself am congested.
++183112.0ns: I myself am congested.
++183724.0ns: I myself am congested.
++183928.0ns: I myself am congested.
++191068.0ns: I myself am congested.
++191884.0ns: I myself am congested.
++205142.0ns: Undetermined State!
++205346.0ns: Undetermined State!
++205550.0ns: Undetermined State!
++205754.0ns: Undetermined State!
++205958.0ns: Undetermined State!
++206162.0ns: Undetermined State!
++206366.0ns: Undetermined State!
++206570.0ns: Undetermined State!
++206774.0ns: Undetermined State!
++206978.0ns: Undetermined State!
++207182.0ns: Undetermined State!
++207386.0ns: Undetermined State!
++207590.0ns: Undetermined State!
++207794.0ns: Undetermined State!
++207998.0ns: Undetermined State!
++208202.0ns: Undetermined State!
++208406.0ns: Undetermined State!
++208610.0ns: Undetermined State!
++208814.0ns: Undetermined State!
++209018.0ns: Undetermined State!
++209222.0ns: Undetermined State!
++209426.0ns: Undetermined State!
++209630.0ns: Undetermined State!
++209834.0ns: Undetermined State!
++210038.0ns: Undetermined State!
++210242.0ns: Undetermined State!
++210446.0ns: Undetermined State!
++210650.0ns: Undetermined State!
++210854.0ns: Undetermined State!
++211058.0ns: Undetermined State!
++211262.0ns: Undetermined State!
++211466.0ns: Undetermined State!
++211670.0ns: Undetermined State!
++211874.0ns: Undetermined State!
++212078.0ns: Undetermined State!
++212282.0ns: Undetermined State!
++212486.0ns: Undetermined State!
++212690.0ns: Undetermined State!
++212894.0ns: Undetermined State!
++213098.0ns: Undetermined State!
++213302.0ns: Undetermined State!
++213506.0ns: Undetermined State!
++213710.0ns: Undetermined State!
++213914.0ns: Undetermined State!
++214118.0ns: Undetermined State!
++214322.0ns: Undetermined State!
++214526.0ns: Undetermined State!
++214730.0ns: Undetermined State!
++214934.0ns: Undetermined State!
++215138.0ns: Undetermined State!
++215342.0ns: Undetermined State!
++215546.0ns: Undetermined State!
++215750.0ns: Undetermined State!
++215954.0ns: Undetermined State!
++216158.0ns: Undetermined State!
++216362.0ns: Undetermined State!
++216566.0ns: Undetermined State!
++216770.0ns: Undetermined State!
++216974.0ns: Undetermined State!
++217178.0ns: Undetermined State!
++217382.0ns: Undetermined State!
++220586.0ns: Undetermined State!
++220790.0ns: Undetermined State!
++220994.0ns: Undetermined State!
++221198.0ns: Undetermined State!
++221402.0ns: Undetermined State!
++221606.0ns: Undetermined State!
++221810.0ns: Undetermined State!
++222014.0ns: Undetermined State!
++222218.0ns: Undetermined State!
++222422.0ns: Undetermined State!
++222626.0ns: Undetermined State!
++222830.0ns: Undetermined State!
++223034.0ns: Undetermined State!
++223238.0ns: Undetermined State!
++223442.0ns: Undetermined State!
++223646.0ns: Undetermined State!
++223850.0ns: Undetermined State!
++224054.0ns: Undetermined State!
++224258.0ns: Undetermined State!
++224462.0ns: Undetermined State!
++224666.0ns: Undetermined State!
++224790.0ns: Undetermined State!
++224870.0ns: Undetermined State!
++224994.0ns: Undetermined State!
++225074.0ns: Undetermined State!
++225198.0ns: Undetermined State!
++225278.0ns: Undetermined State!
++225402.0ns: Undetermined State!
++225482.0ns: Undetermined State!
++225606.0ns: Undetermined State!
++225686.0ns: Undetermined State!
++225810.0ns: Undetermined State!
++225890.0ns: Undetermined State!
++226014.0ns: Undetermined State!
++226094.0ns: Undetermined State!
++226218.0ns: Undetermined State!
++226298.0ns: Undetermined State!
++226422.0ns: Undetermined State!
++226502.0ns: Undetermined State!
++226626.0ns: Undetermined State!
++226706.0ns: Undetermined State!
++226830.0ns: Undetermined State!
++226910.0ns: Undetermined State!
++227034.0ns: Undetermined State!
++227114.0ns: Undetermined State!
++227238.0ns: Undetermined State!
++227318.0ns: Undetermined State!
++227442.0ns: Undetermined State!
++227522.0ns: Undetermined State!
++227646.0ns: Undetermined State!
++227726.0ns: Undetermined State!
++227850.0ns: Undetermined State!
++227930.0ns: Undetermined State!
++228054.0ns: Undetermined State!
++228134.0ns: Undetermined State!
++228258.0ns: Undetermined State!
++228338.0ns: Undetermined State!
++228462.0ns: Undetermined State!
++228542.0ns: Undetermined State!
++228666.0ns: Undetermined State!
++228746.0ns: Undetermined State!
++228870.0ns: Undetermined State!
++228950.0ns: Undetermined State!
++229074.0ns: Undetermined State!
++229154.0ns: Undetermined State!
++229278.0ns: Undetermined State!
++229358.0ns: Undetermined State!
++229482.0ns: Undetermined State!
++229562.0ns: Undetermined State!
++229686.0ns: Undetermined State!
++229766.0ns: Undetermined State!
++229890.0ns: Undetermined State!
++229970.0ns: Undetermined State!
++230094.0ns: Undetermined State!
++230174.0ns: Undetermined State!
++230298.0ns: Undetermined State!
++230378.0ns: Undetermined State!
++230502.0ns: Undetermined State!
++230582.0ns: Undetermined State!
++230706.0ns: Undetermined State!
++230786.0ns: Undetermined State!
++230910.0ns: Undetermined State!
++230990.0ns: Undetermined State!
++231114.0ns: Undetermined State!
++231194.0ns: Undetermined State!
++231318.0ns: Undetermined State!
++231398.0ns: Undetermined State!
++231522.0ns: Undetermined State!
++231602.0ns: Undetermined State!
++231726.0ns: Undetermined State!
++231806.0ns: Undetermined State!
++231930.0ns: Undetermined State!
++232010.0ns: Undetermined State!
++232134.0ns: Undetermined State!
++232214.0ns: Undetermined State!
++232338.0ns: Undetermined State!
++232418.0ns: Undetermined State!
++232542.0ns: Undetermined State!
++232622.0ns: Undetermined State!
++232746.0ns: Undetermined State!
++232826.0ns: Undetermined State!
++232950.0ns: Undetermined State!
++233030.0ns: Undetermined State!
++233154.0ns: Undetermined State!
++233234.0ns: Undetermined State!
++233358.0ns: Undetermined State!
++233438.0ns: Undetermined State!
++233562.0ns: Undetermined State!
++233642.0ns: Undetermined State!
++233766.0ns: Undetermined State!
++233846.0ns: Undetermined State!
++233970.0ns: Undetermined State!
++234050.0ns: Undetermined State!
++234174.0ns: Undetermined State!
++234254.0ns: Undetermined State!
++234378.0ns: Undetermined State!
++234458.0ns: Undetermined State!
++234582.0ns: Undetermined State!
++234662.0ns: Undetermined State!
++234786.0ns: Undetermined State!
++234866.0ns: Undetermined State!
++234990.0ns: Undetermined State!
++235070.0ns: Undetermined State!
++235194.0ns: Undetermined State!
++235274.0ns: Undetermined State!
++235398.0ns: Undetermined State!
++235478.0ns: Undetermined State!
++235602.0ns: Undetermined State!
++235682.0ns: Undetermined State!
++235806.0ns: Undetermined State!
++235886.0ns: Undetermined State!
++236010.0ns: Undetermined State!
++236090.0ns: Undetermined State!
++236214.0ns: Undetermined State!
++236294.0ns: Undetermined State!
++236418.0ns: Undetermined State!
++236498.0ns: Undetermined State!
++236622.0ns: Undetermined State!
++236702.0ns: Undetermined State!
++236826.0ns: Undetermined State!
++236906.0ns: Undetermined State!
++237030.0ns: Undetermined State!
++237110.0ns: Undetermined State!
++237234.0ns: Undetermined State!
++237438.0ns: Undetermined State!
++237642.0ns: Undetermined State!
++237846.0ns: Undetermined State!
++238050.0ns: Undetermined State!
++238116.0ns: Undetermined State!
++238254.0ns: Undetermined State!
++238458.0ns: Undetermined State!
++238524.0ns: Undetermined State!
++238662.0ns: Undetermined State!
++238728.0ns: Undetermined State!
++238866.0ns: Undetermined State!
++238932.0ns: Undetermined State!
++239070.0ns: Undetermined State!
++239204.0ns: Undetermined State!
++239274.0ns: Undetermined State!
++239408.0ns: Undetermined State!
++239478.0ns: Undetermined State!
++239682.0ns: Undetermined State!
++239748.0ns: Undetermined State!
++239886.0ns: Undetermined State!
++239952.0ns: Undetermined State!
++240090.0ns: Undetermined State!
++240156.0ns: Undetermined State!
++240294.0ns: Undetermined State!
++240360.0ns: Undetermined State!
++240498.0ns: Undetermined State!
++240564.0ns: Undetermined State!
++240702.0ns: Undetermined State!
++240836.0ns: Undetermined State!
++240906.0ns: Undetermined State!
++241040.0ns: Undetermined State!
++241110.0ns: Undetermined State!
++241314.0ns: Undetermined State!
++241380.0ns: Undetermined State!
++241584.0ns: Undetermined State!
++241788.0ns: Undetermined State!
++241992.0ns: Undetermined State!
++242196.0ns: Undetermined State!
++242320.0ns: Undetermined State!
++242468.0ns: Undetermined State!
++242672.0ns: Undetermined State!
++242728.0ns: Undetermined State!
++242932.0ns: Undetermined State!
++243012.0ns: Undetermined State!
++243136.0ns: Undetermined State!
++243216.0ns: Undetermined State!
++243408.0ns: Undetermined State!
++243420.0ns: Undetermined State!
++243612.0ns: Undetermined State!
++243624.0ns: Undetermined State!
++243828.0ns: Undetermined State!
++243952.0ns: Undetermined State!
++244100.0ns: Undetermined State!
++244156.0ns: Undetermined State!
++244304.0ns: Undetermined State!
++244360.0ns: Undetermined State!
++244564.0ns: Undetermined State!
++244644.0ns: Undetermined State!
++244768.0ns: Undetermined State!
++244848.0ns: Undetermined State!
++245040.0ns: Undetermined State!
++245052.0ns: Undetermined State!
++245244.0ns: Undetermined State!
++245256.0ns: Undetermined State!
++245460.0ns: Undetermined State!
++245584.0ns: Undetermined State!
++245732.0ns: Undetermined State!
++245788.0ns: Undetermined State!
++245936.0ns: Undetermined State!
++245992.0ns: Undetermined State!
++246196.0ns: Undetermined State!
++246276.0ns: Undetermined State!
++246400.0ns: Undetermined State!
++246480.0ns: Undetermined State!
++246672.0ns: Undetermined State!
++246684.0ns: Undetermined State!
++246876.0ns: Undetermined State!
++246888.0ns: Undetermined State!
++247092.0ns: Undetermined State!
++247216.0ns: Undetermined State!
++247364.0ns: Undetermined State!
++247420.0ns: Undetermined State!
++247568.0ns: Undetermined State!
++247624.0ns: Undetermined State!
++247828.0ns: Undetermined State!
++247908.0ns: Undetermined State!
++248032.0ns: Undetermined State!
++248112.0ns: Undetermined State!
++248304.0ns: Undetermined State!
++248316.0ns: Undetermined State!
++248508.0ns: Undetermined State!
++248520.0ns: Undetermined State!
++248724.0ns: Undetermined State!
++248848.0ns: Undetermined State!
++248996.0ns: Undetermined State!
++249052.0ns: Undetermined State!
++249200.0ns: Undetermined State!
++249256.0ns: Undetermined State!
++249460.0ns: Undetermined State!
++249540.0ns: Undetermined State!
++249664.0ns: Undetermined State!
++249744.0ns: Undetermined State!
++249936.0ns: Undetermined State!
++249948.0ns: Undetermined State!
++250140.0ns: Undetermined State!
++250152.0ns: Undetermined State!
++250356.0ns: Undetermined State!
++250480.0ns: Undetermined State!
++250628.0ns: Undetermined State!
++250684.0ns: Undetermined State!
++250832.0ns: Undetermined State!
++250888.0ns: Undetermined State!
++251092.0ns: Undetermined State!
++251172.0ns: Undetermined State!
++251296.0ns: Undetermined State!
++251376.0ns: Undetermined State!
++251568.0ns: Undetermined State!
++251580.0ns: Undetermined State!
++251772.0ns: Undetermined State!
++251784.0ns: Undetermined State!
++251988.0ns: Undetermined State!
++252112.0ns: Undetermined State!
++252260.0ns: Undetermined State!
++252316.0ns: Undetermined State!
++252464.0ns: Undetermined State!
++252520.0ns: Undetermined State!
++252724.0ns: Undetermined State!
++252804.0ns: Undetermined State!
++252928.0ns: Undetermined State!
++253008.0ns: Undetermined State!
++253200.0ns: Undetermined State!
++253212.0ns: Undetermined State!
++253404.0ns: Undetermined State!
++253416.0ns: Undetermined State!
++253620.0ns: Undetermined State!
++253744.0ns: Undetermined State!
++253892.0ns: Undetermined State!
++253948.0ns: Undetermined State!
++254096.0ns: Undetermined State!
++254152.0ns: Undetermined State!
++254356.0ns: Undetermined State!
++254436.0ns: Undetermined State!
++254560.0ns: Undetermined State!
++254640.0ns: Undetermined State!
++254832.0ns: Undetermined State!
++254844.0ns: Undetermined State!
++255036.0ns: Undetermined State!
++255048.0ns: Undetermined State!
++255252.0ns: Undetermined State!
++255376.0ns: Undetermined State!
++255524.0ns: Undetermined State!
++255580.0ns: Undetermined State!
++255728.0ns: Undetermined State!
++255784.0ns: Undetermined State!
++255988.0ns: Undetermined State!
++256068.0ns: Undetermined State!
++256192.0ns: Undetermined State!
++256272.0ns: Undetermined State!
++256464.0ns: Undetermined State!
++256476.0ns: Undetermined State!
++256668.0ns: Undetermined State!
++256680.0ns: Undetermined State!
++256884.0ns: Undetermined State!
++257008.0ns: Undetermined State!
++257156.0ns: Undetermined State!
++257212.0ns: Undetermined State!
++257360.0ns: Undetermined State!
++257416.0ns: Undetermined State!
++257620.0ns: Undetermined State!
++257700.0ns: Undetermined State!
++257824.0ns: Undetermined State!
++257904.0ns: Undetermined State!
++258096.0ns: Undetermined State!
++258108.0ns: Undetermined State!
++258300.0ns: Undetermined State!
++258312.0ns: Undetermined State!
++258516.0ns: Undetermined State!
++258640.0ns: Undetermined State!
++258788.0ns: Undetermined State!
++258844.0ns: Undetermined State!
++258992.0ns: Undetermined State!
++259048.0ns: Undetermined State!
++259252.0ns: Undetermined State!
++259332.0ns: Undetermined State!
++259456.0ns: Undetermined State!
++259536.0ns: Undetermined State!
++259728.0ns: Undetermined State!
++259740.0ns: Undetermined State!
++259932.0ns: Undetermined State!
++259944.0ns: Undetermined State!
++260148.0ns: Undetermined State!
++260272.0ns: Undetermined State!
++260420.0ns: Undetermined State!
++260476.0ns: Undetermined State!
++260624.0ns: Undetermined State!
++260680.0ns: Undetermined State!
++260884.0ns: Undetermined State!
++260964.0ns: Undetermined State!
++261088.0ns: Undetermined State!
++261168.0ns: Undetermined State!
++261360.0ns: Undetermined State!
++261372.0ns: Undetermined State!
++261564.0ns: Undetermined State!
++261576.0ns: Undetermined State!
++261780.0ns: Undetermined State!
++261904.0ns: Undetermined State!
++262052.0ns: Undetermined State!
++262108.0ns: Undetermined State!
++262256.0ns: Undetermined State!
++262312.0ns: Undetermined State!
++262516.0ns: Undetermined State!
++262596.0ns: Undetermined State!
++262720.0ns: Undetermined State!
++262800.0ns: Undetermined State!
++262992.0ns: Undetermined State!
++263004.0ns: Undetermined State!
++263196.0ns: Undetermined State!
++263208.0ns: Undetermined State!
++263412.0ns: Undetermined State!
++263536.0ns: Undetermined State!
++263684.0ns: Undetermined State!
++263740.0ns: Undetermined State!
++263888.0ns: Undetermined State!
++263944.0ns: Undetermined State!
++264148.0ns: Undetermined State!
++264228.0ns: Undetermined State!
++264352.0ns: Undetermined State!
++264432.0ns: Undetermined State!
++264624.0ns: Undetermined State!
++264636.0ns: Undetermined State!
++264828.0ns: Undetermined State!
++264840.0ns: Undetermined State!
++265044.0ns: Undetermined State!
++265168.0ns: Undetermined State!
++265316.0ns: Undetermined State!
++265372.0ns: Undetermined State!
++265520.0ns: Undetermined State!
++265576.0ns: Undetermined State!
++265780.0ns: Undetermined State!
++265860.0ns: Undetermined State!
++265984.0ns: Undetermined State!
++266064.0ns: Undetermined State!
++266256.0ns: Undetermined State!
++266268.0ns: Undetermined State!
++266460.0ns: Undetermined State!
++266472.0ns: Undetermined State!
++266676.0ns: Undetermined State!
++266800.0ns: Undetermined State!
++266948.0ns: Undetermined State!
++267004.0ns: Undetermined State!
++267152.0ns: Undetermined State!
++267208.0ns: Undetermined State!
++267412.0ns: Undetermined State!
++267492.0ns: Undetermined State!
++267616.0ns: Undetermined State!
++267696.0ns: Undetermined State!
++267888.0ns: Undetermined State!
++267900.0ns: Undetermined State!
++268092.0ns: Undetermined State!
++268104.0ns: Undetermined State!
++268308.0ns: Undetermined State!
++268432.0ns: Undetermined State!
++268580.0ns: Undetermined State!
++268636.0ns: Undetermined State!
++268784.0ns: Undetermined State!
++268840.0ns: Undetermined State!
++269044.0ns: Undetermined State!
++269124.0ns: Undetermined State!
++269248.0ns: Undetermined State!
++269328.0ns: Undetermined State!
++269520.0ns: Undetermined State!
++269532.0ns: Undetermined State!
++269724.0ns: Undetermined State!
++269736.0ns: Undetermined State!
++269940.0ns: Undetermined State!
++270064.0ns: Undetermined State!
++270212.0ns: Undetermined State!
++270268.0ns: Undetermined State!
++270416.0ns: Undetermined State!
++270472.0ns: Undetermined State!
++270676.0ns: Undetermined State!
++270756.0ns: Undetermined State!
++270880.0ns: Undetermined State!
++270960.0ns: Undetermined State!
++271152.0ns: Undetermined State!
++271164.0ns: Undetermined State!
++271356.0ns: Undetermined State!
++271368.0ns: Undetermined State!
++271572.0ns: Undetermined State!
++271696.0ns: Undetermined State!
++271844.0ns: Undetermined State!
++271900.0ns: Undetermined State!
++272048.0ns: Undetermined State!
++272104.0ns: Undetermined State!
++272308.0ns: Undetermined State!
++272388.0ns: Undetermined State!
++272512.0ns: Undetermined State!
++272592.0ns: Undetermined State!
++272784.0ns: Undetermined State!
++272796.0ns: Undetermined State!
++272988.0ns: Undetermined State!
++273000.0ns: Undetermined State!
++273204.0ns: Undetermined State!
++273328.0ns: Undetermined State!
++273476.0ns: Undetermined State!
++273532.0ns: Undetermined State!
++273680.0ns: Undetermined State!
++273736.0ns: Undetermined State!
++273940.0ns: Undetermined State!
++274020.0ns: Undetermined State!
++274144.0ns: Undetermined State!
++274224.0ns: Undetermined State!
++274416.0ns: Undetermined State!
++274428.0ns: Undetermined State!
++274620.0ns: Undetermined State!
++274632.0ns: Undetermined State!
++274836.0ns: Undetermined State!
++274960.0ns: Undetermined State!
++275040.0ns: Undetermined State!
++275164.0ns: Undetermined State!
++275244.0ns: Undetermined State!
++275368.0ns: Undetermined State!
++275448.0ns: Undetermined State!
++275572.0ns: Undetermined State!
++275652.0ns: Undetermined State!
++275776.0ns: Undetermined State!
++275884.0ns: Undetermined State!
++276048.0ns: Undetermined State!
++276088.0ns: Undetermined State!
++276252.0ns: Undetermined State!
++276350.0ns: Undetermined State!
++276554.0ns: Undetermined State!
++276592.0ns: Undetermined State!
++276796.0ns: Undetermined State!
++276816.0ns: Undetermined State!
++277000.0ns: Undetermined State!
++277020.0ns: Undetermined State!
++277204.0ns: Undetermined State!
++277282.0ns: Undetermined State!
++277408.0ns: Undetermined State!
++277486.0ns: Undetermined State!
++277680.0ns: Undetermined State!
++277692.0ns: Undetermined State!
++277884.0ns: Undetermined State!
++277896.0ns: Undetermined State!
++278100.0ns: Undetermined State!
++278224.0ns: Undetermined State!
++278304.0ns: Undetermined State!
++278428.0ns: Undetermined State!
++278508.0ns: Undetermined State!
++278632.0ns: Undetermined State!
++278712.0ns: Undetermined State!
++278836.0ns: Undetermined State!
++278916.0ns: Undetermined State!
++279040.0ns: Undetermined State!
++279146.0ns: Undetermined State!
++279244.0ns: Undetermined State!
++279350.0ns: Undetermined State!
++279448.0ns: Undetermined State!
++279612.0ns: Undetermined State!
++279652.0ns: Undetermined State!
++279816.0ns: Undetermined State!
++279856.0ns: Undetermined State!
++280078.0ns: Undetermined State!
++280088.0ns: Undetermined State!
++280282.0ns: Undetermined State!
++280292.0ns: Undetermined State!
++280544.0ns: Undetermined State!
++280554.0ns: Undetermined State!
++280748.0ns: Undetermined State!
++280758.0ns: Undetermined State!
++280956.0ns: Undetermined State!
++281020.0ns: Undetermined State!
++281160.0ns: Undetermined State!
++281224.0ns: Undetermined State!
++281364.0ns: Undetermined State!
++281486.0ns: Undetermined State!
++281568.0ns: Undetermined State!
++281690.0ns: Undetermined State!
++281772.0ns: Undetermined State!
++281896.0ns: Undetermined State!
++281976.0ns: Undetermined State!
++282100.0ns: Undetermined State!
++282180.0ns: Undetermined State!
++282304.0ns: Undetermined State!
++282408.0ns: Undetermined State!
++282508.0ns: Undetermined State!
++282612.0ns: Undetermined State!
++282712.0ns: Undetermined State!
++282874.0ns: Undetermined State!
++282916.0ns: Undetermined State!
++283078.0ns: Undetermined State!
++283120.0ns: Undetermined State!
++283340.0ns: Undetermined State!
++283350.0ns: Undetermined State!
++283544.0ns: Undetermined State!
++283554.0ns: Undetermined State!
++283806.0ns: Undetermined State!
++283816.0ns: Undetermined State!
++284010.0ns: Undetermined State!
++284020.0ns: Undetermined State!
++284220.0ns: Undetermined State!
++284282.0ns: Undetermined State!
++284424.0ns: Undetermined State!
++284486.0ns: Undetermined State!
++284628.0ns: Undetermined State!
++284748.0ns: Undetermined State!
++284832.0ns: Undetermined State!
++284952.0ns: Undetermined State!
++285036.0ns: Undetermined State!
++285160.0ns: Undetermined State!
++285240.0ns: Undetermined State!
++285364.0ns: Undetermined State!
++285444.0ns: Undetermined State!
++285568.0ns: Undetermined State!
++285670.0ns: Undetermined State!
++285772.0ns: Undetermined State!
++285874.0ns: Undetermined State!
++285976.0ns: Undetermined State!
++286136.0ns: Undetermined State!
++286180.0ns: Undetermined State!
++286340.0ns: Undetermined State!
++286384.0ns: Undetermined State!
++286602.0ns: Undetermined State!
++286612.0ns: Undetermined State!
++286806.0ns: Undetermined State!
++286816.0ns: Undetermined State!
++287068.0ns: Undetermined State!
++287078.0ns: Undetermined State!
++287272.0ns: Undetermined State!
++287282.0ns: Undetermined State!
++287484.0ns: Undetermined State!
++287544.0ns: Undetermined State!
++287688.0ns: Undetermined State!
++287748.0ns: Undetermined State!
++287892.0ns: Undetermined State!
++288010.0ns: Undetermined State!
++288096.0ns: Undetermined State!
++288214.0ns: Undetermined State!
++288300.0ns: Undetermined State!
++288424.0ns: Undetermined State!
++288504.0ns: Undetermined State!
++288628.0ns: Undetermined State!
++288708.0ns: Undetermined State!
++288832.0ns: Undetermined State!
++288932.0ns: Undetermined State!
++289036.0ns: Undetermined State!
++289136.0ns: Undetermined State!
++289240.0ns: Undetermined State!
++289398.0ns: Undetermined State!
++289444.0ns: Undetermined State!
++289602.0ns: Undetermined State!
++289648.0ns: Undetermined State!
++289864.0ns: Undetermined State!
++289874.0ns: Undetermined State!
++290068.0ns: Undetermined State!
++290078.0ns: Undetermined State!
++290330.0ns: Undetermined State!
++290340.0ns: Undetermined State!
++290534.0ns: Undetermined State!
++290544.0ns: Undetermined State!
++290748.0ns: Undetermined State!
++290806.0ns: Undetermined State!
++290952.0ns: Undetermined State!
++291010.0ns: Undetermined State!
++291156.0ns: Undetermined State!
++291272.0ns: Undetermined State!
++291360.0ns: Undetermined State!
++291476.0ns: Undetermined State!
++291564.0ns: Undetermined State!
++291688.0ns: Undetermined State!
++291768.0ns: Undetermined State!
++291892.0ns: Undetermined State!
++291972.0ns: Undetermined State!
++292096.0ns: Undetermined State!
++292194.0ns: Undetermined State!
++292300.0ns: Undetermined State!
++292398.0ns: Undetermined State!
++292504.0ns: Undetermined State!
++292660.0ns: Undetermined State!
++292708.0ns: Undetermined State!
++292864.0ns: Undetermined State!
++292912.0ns: Undetermined State!
++293126.0ns: Undetermined State!
++293136.0ns: Undetermined State!
++293330.0ns: Undetermined State!
++293340.0ns: Undetermined State!
++293592.0ns: Undetermined State!
++293602.0ns: Undetermined State!
++293796.0ns: Undetermined State!
++293806.0ns: Undetermined State!
++294012.0ns: Undetermined State!
++294068.0ns: Undetermined State!
++294216.0ns: Undetermined State!
++294272.0ns: Undetermined State!
++294420.0ns: Undetermined State!
++294534.0ns: Undetermined State!
++294624.0ns: Undetermined State!
++294738.0ns: Undetermined State!
++294828.0ns: Undetermined State!
++294952.0ns: Undetermined State!
++295032.0ns: Undetermined State!
++295156.0ns: Undetermined State!
++295236.0ns: Undetermined State!
++295360.0ns: Undetermined State!
++295456.0ns: Undetermined State!
++295564.0ns: Undetermined State!
++295660.0ns: Undetermined State!
++295768.0ns: Undetermined State!
++295922.0ns: Undetermined State!
++295972.0ns: Undetermined State!
++296126.0ns: Undetermined State!
++296176.0ns: Undetermined State!
++296388.0ns: Undetermined State!
++296398.0ns: Undetermined State!
++296592.0ns: Undetermined State!
++296602.0ns: Undetermined State!
++296854.0ns: Undetermined State!
++296864.0ns: Undetermined State!
++297058.0ns: Undetermined State!
++297068.0ns: Undetermined State!
++297276.0ns: Undetermined State!
++297330.0ns: Undetermined State!
++297480.0ns: Undetermined State!
++297534.0ns: Undetermined State!
++297684.0ns: Undetermined State!
++297796.0ns: Undetermined State!
++297888.0ns: Undetermined State!
++298000.0ns: Undetermined State!
++298092.0ns: Undetermined State!
++298216.0ns: Undetermined State!
++298296.0ns: Undetermined State!
++298420.0ns: Undetermined State!
++298500.0ns: Undetermined State!
++298624.0ns: Undetermined State!
++298718.0ns: Undetermined State!
++298828.0ns: Undetermined State!
++298922.0ns: Undetermined State!
++299032.0ns: Undetermined State!
++299184.0ns: Undetermined State!
++299236.0ns: Undetermined State!
++299388.0ns: Undetermined State!
++299440.0ns: Undetermined State!
++299650.0ns: Undetermined State!
++299660.0ns: Undetermined State!
++299854.0ns: Undetermined State!
++299864.0ns: Undetermined State!
++300116.0ns: Undetermined State!
++300126.0ns: Undetermined State!
++300320.0ns: Undetermined State!
++300330.0ns: Undetermined State!
++300540.0ns: Undetermined State!
++300592.0ns: Undetermined State!
++300744.0ns: Undetermined State!
++300796.0ns: Undetermined State!
++300948.0ns: Undetermined State!
++301058.0ns: Undetermined State!
++301152.0ns: Undetermined State!
++301262.0ns: Undetermined State!
++301356.0ns: Undetermined State!
++301480.0ns: Undetermined State!
++301560.0ns: Undetermined State!
++301684.0ns: Undetermined State!
++301764.0ns: Undetermined State!
++301888.0ns: Undetermined State!
++301980.0ns: Undetermined State!
++302092.0ns: Undetermined State!
++302184.0ns: Undetermined State!
++302296.0ns: Undetermined State!
++302446.0ns: Undetermined State!
++302500.0ns: Undetermined State!
++302650.0ns: Undetermined State!
++302704.0ns: Undetermined State!
++302912.0ns: Undetermined State!
++302922.0ns: Undetermined State!
++303116.0ns: Undetermined State!
++303126.0ns: Undetermined State!
++303378.0ns: Undetermined State!
++303388.0ns: Undetermined State!
++303582.0ns: Undetermined State!
++303592.0ns: Undetermined State!
++303804.0ns: Undetermined State!
++303854.0ns: Undetermined State!
++304008.0ns: Undetermined State!
++304058.0ns: Undetermined State!
++304212.0ns: Undetermined State!
++304320.0ns: Undetermined State!
++304416.0ns: Undetermined State!
++304524.0ns: Undetermined State!
++304620.0ns: Undetermined State!
++304744.0ns: Undetermined State!
++304824.0ns: Undetermined State!
++304948.0ns: Undetermined State!
++305028.0ns: Undetermined State!
++305152.0ns: Undetermined State!
++305242.0ns: Undetermined State!
++305356.0ns: Undetermined State!
++305446.0ns: Undetermined State!
++305560.0ns: Undetermined State!
++305708.0ns: Undetermined State!
++305764.0ns: Undetermined State!
++305912.0ns: Undetermined State!
++305968.0ns: Undetermined State!
++306174.0ns: Undetermined State!
++306184.0ns: Undetermined State!
++306378.0ns: Undetermined State!
++306388.0ns: Undetermined State!
++306640.0ns: Undetermined State!
++306650.0ns: Undetermined State!
++306844.0ns: Undetermined State!
++306854.0ns: Undetermined State!
++307068.0ns: Undetermined State!
++307116.0ns: Undetermined State!
++307272.0ns: Undetermined State!
++307320.0ns: Undetermined State!
++307476.0ns: Undetermined State!
++307582.0ns: Undetermined State!
++307680.0ns: Undetermined State!
++307786.0ns: Undetermined State!
++307884.0ns: Undetermined State!
++308008.0ns: Undetermined State!
++308088.0ns: Undetermined State!
++308212.0ns: Undetermined State!
++308292.0ns: Undetermined State!
++308416.0ns: Undetermined State!
++308504.0ns: Undetermined State!
++308620.0ns: Undetermined State!
++308708.0ns: Undetermined State!
++308824.0ns: Undetermined State!
++308970.0ns: Undetermined State!
++309028.0ns: Undetermined State!
++309174.0ns: Undetermined State!
++309232.0ns: Undetermined State!
++309436.0ns: Undetermined State!
++309446.0ns: Undetermined State!
++309640.0ns: Undetermined State!
++309650.0ns: Undetermined State!
++309902.0ns: Undetermined State!
++309912.0ns: Undetermined State!
++310106.0ns: Undetermined State!
++310116.0ns: Undetermined State!
++310332.0ns: Undetermined State!
++310378.0ns: Undetermined State!
++310536.0ns: Undetermined State!
++310582.0ns: Undetermined State!
++310740.0ns: Undetermined State!
++310844.0ns: Undetermined State!
++310944.0ns: Undetermined State!
++311048.0ns: Undetermined State!
++311148.0ns: Undetermined State!
++311352.0ns: Undetermined State!
++311556.0ns: Undetermined State!
++311766.0ns: Undetermined State!
++311970.0ns: Undetermined State!
++312232.0ns: Undetermined State!
++312436.0ns: Undetermined State!
++312698.0ns: Undetermined State!
++312902.0ns: Undetermined State!
++313164.0ns: Undetermined State!
++313368.0ns: Undetermined State!
++313596.0ns: Undetermined State!
++313800.0ns: Undetermined State!
++314004.0ns: Undetermined State!
++314208.0ns: Undetermined State!
++314412.0ns: Undetermined State!
++314616.0ns: Undetermined State!
++314820.0ns: Undetermined State!
++315028.0ns: Undetermined State!
++315232.0ns: Undetermined State!
++315494.0ns: Undetermined State!
++315698.0ns: Undetermined State!
++315960.0ns: Undetermined State!
++316164.0ns: Undetermined State!
++316426.0ns: Undetermined State!
++316630.0ns: Undetermined State!
++316860.0ns: Undetermined State!
++317064.0ns: Undetermined State!
++317268.0ns: Undetermined State!
++317472.0ns: Undetermined State!
++317676.0ns: Undetermined State!
++317880.0ns: Undetermined State!
++318084.0ns: Undetermined State!
++318290.0ns: Undetermined State!
++318494.0ns: Undetermined State!
++318756.0ns: Undetermined State!
++318960.0ns: Undetermined State!
++319222.0ns: Undetermined State!
++319426.0ns: Undetermined State!
++319688.0ns: Undetermined State!
++319892.0ns: Undetermined State!
++320124.0ns: Undetermined State!
++320328.0ns: Undetermined State!
++320532.0ns: Undetermined State!
++320736.0ns: Undetermined State!
++320940.0ns: Undetermined State!
++321144.0ns: Undetermined State!
++321348.0ns: Undetermined State!
++321552.0ns: Undetermined State!
++321756.0ns: Undetermined State!
++322018.0ns: Undetermined State!
++322222.0ns: Undetermined State!
++322484.0ns: Undetermined State!
++322688.0ns: Undetermined State!
++322950.0ns: Undetermined State!
++323154.0ns: Undetermined State!
++323388.0ns: Undetermined State!
++323592.0ns: Undetermined State!
++323796.0ns: Undetermined State!
++324000.0ns: Undetermined State!
++324204.0ns: Undetermined State!
++324408.0ns: Undetermined State!
++324612.0ns: Undetermined State!
++324816.0ns: Undetermined State!
++325020.0ns: Undetermined State!
++325280.0ns: Undetermined State!
++325484.0ns: Undetermined State!
++325746.0ns: Undetermined State!
++325950.0ns: Undetermined State!
++326212.0ns: Undetermined State!
++326416.0ns: Undetermined State!
++326652.0ns: Undetermined State!
++326856.0ns: Undetermined State!
++327060.0ns: Undetermined State!
++327264.0ns: Undetermined State!
++327468.0ns: Undetermined State!
++327672.0ns: Undetermined State!
++327876.0ns: Undetermined State!
++328080.0ns: Undetermined State!
++328284.0ns: Undetermined State!
++328542.0ns: Undetermined State!
++328746.0ns: Undetermined State!
++329008.0ns: Undetermined State!
++329212.0ns: Undetermined State!
++329474.0ns: Undetermined State!
++329678.0ns: Undetermined State!
++329916.0ns: Undetermined State!
++330120.0ns: Undetermined State!
++330324.0ns: Undetermined State!
++330528.0ns: Undetermined State!
++330732.0ns: Undetermined State!
++330936.0ns: Undetermined State!
++331140.0ns: Undetermined State!
++331344.0ns: Undetermined State!
++331548.0ns: Undetermined State!
++331804.0ns: Undetermined State!
++332008.0ns: Undetermined State!
++332270.0ns: Undetermined State!
++332474.0ns: Undetermined State!
++332736.0ns: Undetermined State!
++332940.0ns: Undetermined State!
++333180.0ns: Undetermined State!
++333384.0ns: Undetermined State!
++333588.0ns: Undetermined State!
++333792.0ns: Undetermined State!
++333996.0ns: Undetermined State!
++334200.0ns: Undetermined State!
++334404.0ns: Undetermined State!
++334608.0ns: Undetermined State!
